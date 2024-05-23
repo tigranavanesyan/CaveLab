@@ -37,7 +37,9 @@
     font-weight: 700;
     font-style: normal;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -55,16 +57,15 @@ a{
     text-decoration: none;
     color: inherit;
 }
-/*button{*/
-/*    width: auto;*/
-/*}*/
 .container{
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
+
 }
 body{
-
+    /*overflow: hidden;*/
+    overflow-x: hidden;
     background-color: var(--white);
 }
 header{
@@ -142,8 +143,13 @@ header{
     padding-top: 40px;
     margin-bottom: 80px;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 0fr;
     gap: 10px;
+    transition: 1s;
+
+}
+.first_screen.first_screen_grid{
+
 }
 .start{
     position: relative;
@@ -152,7 +158,6 @@ header{
     background-image: url("../images/1.jpg");
     background-size: cover;
     background-position: center;
-    /*padding: 30px;*/
 }
 .start img{
 
@@ -169,7 +174,7 @@ header{
     justify-content: end;
 }
 .overlay h2{
-    color: var(--white, #F5F5F5);
+    color: var(--white);
     font-family: "Montserrat_arm";
     font-size: 32px;
     letter-spacing: 0.5px;
@@ -178,11 +183,18 @@ header{
     line-height: normal;
     margin-bottom: 23px;
 }
+
 .discover_block{
-    display: grid;
+    box-sizing: border-box;
+    height: 100%;
+    display: none;
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: 5fr 7fr;
     gap: 10px;
+}
+.first_screen_grid .discover_block{
+    display: grid;
+
 }
 .discover_block>*{
     border-radius: 20px;
@@ -197,7 +209,7 @@ header{
     flex-direction: column-reverse;
 }
 .discover_block_1 h2{
-    color: var(--white, #F5F5F5);
+    color: var(--white);
     font-family: "Montserrat_arm";
     font-size: 28px;
     font-style: normal;
@@ -228,7 +240,7 @@ header{
     position: absolute;
     left: 0;
     right: 0;
-    animation: bounce 3s infinite;
+    animation: bounce1 3s infinite;
     height: 100%;
 }
 .arrow::before {
@@ -242,7 +254,7 @@ header{
     height: 100%;
 }
 
-@keyframes bounce {
+@keyframes bounce1 {
     0% {
         top: -80px;
     }
@@ -289,21 +301,8 @@ header{
     padding: 20px 73px;
 }
 
-
-
-/*.running_text_wrapper{*/
-/*    margin-top: 100px;*/
-/*    margin-bottom: 100px;*/
-/*    display: flex;*/
-/*    padding: 13px 23px;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    gap: 23px;*/
-/*    background-color: var(--brown2);*/
-/*}*/
 .educational_program{
     margin-top: 80px;
-
 }
 .educational_program h2{
     font-family: Oldtime;
@@ -330,7 +329,7 @@ header{
     height: 350px;
 }
 .img_text>p{
-    color: var(--black, #252525);
+    color: var(--black);
     font-family: "Montserrat_arm";
     font-size: 26px;
     font-style: normal;
@@ -343,7 +342,7 @@ header{
     flex-direction: column-reverse;
 }
 .first_phase>h2{
-    color: var(--brown2, #B1593A);
+    color: var(--brown2);
     font-family: Oldtime;
     font-size: 50px;
     font-style: normal;
@@ -402,7 +401,7 @@ header{
     padding: 15px 5px;
     justify-content: center;
     align-items: center;
-    color: #F5F5F5;
+    color: var(--white);
 
     font-family: Montserrat;
     font-size: 18px;
@@ -421,7 +420,7 @@ header{
     gap: 10px;
 }
 .icon-text span{
-    color: #F5F5F5;
+    color: var(--white);
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
@@ -431,7 +430,7 @@ header{
 .duration{
     margin-left: 10px;
     margin-bottom: 15px;
-    color: #F5F5F5;
+    color: var(--white);
 
     font-family: Arial;
     font-size: 20px;
@@ -448,7 +447,7 @@ header{
     padding-top: 45px;
 }
 .second_phase h2{
-    color: var(--brown2, #B1593A);
+    color: var(--brown2);
     font-family: Oldtime;
     font-size: 50px;
     font-style: normal;
@@ -490,17 +489,33 @@ header{
 .counter_wrapper>div{
     font-size: 96px;
 }
-.counter{
-    display: inline-block;
+.counterPlus{
     position: relative;
+}
+.counter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: inline-block;
+    /*position: relative;*/
     padding-right: 50px;
 
 }
-.counter::after{
+.counterForFixingWidth{
+    display: inline-block;
+    position: relative;
+    padding-right: 50px;
+    color: transparent;
+}
+.counterForFixingWidth::after{
     position: absolute;
     content: "+";
     top: 0;
     right: 0;
+    color: var(--white);
 
 }
 .counter_wrapper span{
@@ -603,7 +618,7 @@ header{
 }
 
 .teacher_name{
-    color: var(--Style, #6D3B29);
+    color: var(--Style);
     font-family: "Montserrat_arm";
     font-size: 30px;
     font-weight: 700;
@@ -678,15 +693,15 @@ svg.linkedin_icon{
     padding-bottom: 45px;
     text-align: center;
 
-    color: var(--brown2, #B1593A);
+    color: var(--brown2);
     font-family: "Montserrat_arm";
     font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
 }
 .conditions_stage h3.change_color{
-    color: var(--orange, #E77414);
-    border: 1px solid var(--orange, #E77414);
+    color: var(--orange);
+    border: 1px solid var(--orange);
 }
 
 .conditions_lists{
@@ -700,7 +715,7 @@ svg.linkedin_icon{
     justify-content: space-between;
 }
 .conditions_lists.change_color{
-    background: #FD925B;
+    background: var(--brown3);
 }
 .conditions_lists .list{
     display: flex;
@@ -732,13 +747,13 @@ svg.linkedin_icon{
     gap: 25px;
 }
 .icon-text span{
-    color: var(--white, #F5F5F5);
+    color: var(--white);
     font-family: Montserrat;
     font-size: 26px;
     font-weight: 500;
 }
 .icon-text2 span{
-    color: var(--white, #F5F5F5);
+    color: var(--white);
     font-family: Montserrat;
     font-size: 26px;
     font-weight: 500;
@@ -754,7 +769,7 @@ svg.linkedin_icon{
 }
 .price2{
     color: var(--white);
-    background: #FD925B;
+    background: var(--brown3);
     border-radius: 20px;
     padding: 30px 30px 30px 80px;
     font-family: "Montserrat_arm";
@@ -779,6 +794,7 @@ footer{
     font-family: Montserrat;
     margin-top: 36px;
     padding-top: 77px;
+    overflow: hidden;
 }
 .contact_row{
     display: grid;
@@ -830,6 +846,7 @@ footer{
     margin-top: 60px;
     padding-bottom: 50px;
     border-bottom: 1px solid white;
+    overflow-y: hidden;
 }
 .map_row iframe{
     width: 100%;
@@ -845,6 +862,7 @@ footer{
     gap: 10px;
     padding-top: 40px;
     padding-bottom: 40px;
+    overflow-y: hidden;
 
 }
 .info_column{
