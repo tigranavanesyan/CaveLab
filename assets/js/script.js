@@ -17,7 +17,6 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 function addAnimation() {
     scrollers.forEach((scroller) => {
         scroller.setAttribute("data-animated", true)
-        console.log(scroller.offsetWidth)
 
         const scrollerInner = scroller.querySelector(".scroller__inner")
         const scrollerContent = Array.from(scrollerInner.children)
@@ -50,5 +49,48 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     updateCounter()
+});
+
+// Fixed header and active link functionality
+let lastScrollTop = 0
+const fixedHeader = document.querySelector(".header_fixed")
+const navSections = document.querySelectorAll(".nav_section")
+const navLinks = document.querySelectorAll(".menu li a")
+
+navLinks.forEach((l)=>{
+    l.addEventListener('click',()=>{
+        setTimeout(()=>{
+            fixedHeader.style.top = "-85px"
+        },1000)
+    })
+})
+window.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY;
+
+    // Handle fixed header appearance
+    if (scrollTop > lastScrollTop) {
+        fixedHeader.style.top = "-85px"
+    } else {
+        fixedHeader.style.top = "0px"
+    }
+    lastScrollTop = scrollTop
+
+    // Handle active link highlighting
+    navSections.forEach(sec => {
+        let offset = sec.offsetTop
+        let id = sec.getAttribute('id')
+        let windowHeight = window.innerHeight
+
+        if (scrollTop >= offset - windowHeight/2) {
+            navLinks.forEach(link => {
+                link.classList.remove('active')
+            });
+
+            let activeLink = document.querySelector(`.menu li a[href*="${id}"]`)
+            if (activeLink) {
+                activeLink.classList.add('active')
+            }
+        }
+    });
 });
 

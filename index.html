@@ -13,7 +13,7 @@
     <link rel="icon" href="./assets/images/logo.png">
     <title>CaveLab</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/animate.css"/>
+    <link rel="stylesheet" href="./assets/css/animate.css">
 </head>
 <body>
 
@@ -72,33 +72,33 @@
             <path d="M33.9168 18.4999C33.9168 9.98992 27.0102 3.08325 18.5002 3.08325C9.99016 3.08325 3.0835 9.98992 3.0835 18.4999C3.0835 25.9616 8.38683 32.1745 15.4168 33.6083V23.1249H12.3335V18.4999H15.4168V14.6458C15.4168 11.6703 17.8372 9.24992 20.8127 9.24992H24.6668V13.8749H21.5835C20.7356 13.8749 20.0418 14.5687 20.0418 15.4166V18.4999H24.6668V23.1249H20.0418V33.8395C27.8272 33.0687 33.9168 26.5012 33.9168 18.4999Z" fill="#F5F5F5"/>
         </symbol>
     </svg>
-
 </div>
 <header class="container">
-    <a href="#" class="logo_wrapper">
-        <img src="./assets/images/logo.png" alt="Logo"/>
-        <Span>CaveLab</Span>
-    </a>
-    <nav>
-        <ul class="menu">
-            <li class="active"><a href="#">Կրթական ծրագիր</a></li>
-            <li><a href="#about">Մեր մասին</a></li>
-            <li><a href="#conditions">Պայմաններ</a></li>
-            <li><a href="#contacts">Կոնտակտ</a></li>
+    <div class="header_fixed container">
+        <a href="#" class="logo_wrapper">
+            <img src="./assets/images/logo.png" alt="Logo">
+            <Span>CaveLab</Span>
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#program">Կրթական ծրագիր</a></li>
+                <li><a href="#about">Մեր մասին</a></li>
+                <li><a href="#conditions">Պայմաններ</a></li>
+                <li><a href="#contacts">Կոնտակտ</a></li>
+            </ul>
+        </nav>
+        <ul class="languages">
+            <li><a href="#">Eng</a></li>
+            <li><a href="#">Ру</a></li>
+            <li class="arm"><a href="#">Հայ</a></li>
         </ul>
-    </nav>
-    <ul class="languages">
-        <li><a href="#">Eng</a></li>
-        <li><a href="#">Ру</a></li>
-        <li class="arm"><a href="#">Հայ</a></li>
-    </ul>
+    </div>
 </header>
 <main>
-    <section class="first_screen container">
+    <section id="home" class="first_screen container nav_section">
         <div class="start">
-<!--            <img src="./assets/images/1.jpg" alt="image"/>-->
             <div class="overlay">
-                <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="2s">
+                <h2 class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="2s">
                     Սկսեք Ձեր ինժեներական ճանապարհորդությունը
                 </h2>
                 <button class="btn btn-main wow fadeInLeft" data-wow-duration="2s" data-wow-delay="2s">Գրանցվել</button>
@@ -109,7 +109,7 @@
                 <svg class="lightning">
                     <use xlink:href="#lightning"></use>
                 </svg>
-                <h2>
+                <h2 class="wow bounceInRight" data-wow-duration="2s" data-wow-delay="3s">
                     Բացահայտեք, ուսումնասիրեք, ստեղծեք
                 </h2>
             </div>
@@ -117,7 +117,7 @@
                 <div class="arrow">&#8595;</div>
             </div>
             <div class="discover_block_3 wow fadeInUp"  data-wow-duration="2s" data-wow-delay="3s">
-                <img src="./assets/images/2.jpg" alt="image"/>
+                <img src="./assets/images/2.jpg" alt="image">
             </div>
         </div>
     </section>
@@ -133,223 +133,226 @@
             <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
         </ul>
     </div>
-    <section class="educational_program container">
-        <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">Կրթական ծրագիր</h2>
-        <div class="img_text">
-            <img class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/3.jpg" alt="image"/>
-            <p class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" >
-                Cavelab-ի կրթական  ծրագիրը համալիր կրթական միջոցառումների շարք է և կազմված է 2 փուլից: Փուլերից յուրաքանչյուրը կոնկրետ խնդիր է լուծում, որի արդյունքում որպես «պրոդուկտ» ունենում ենք բավարար աշխատանքային փորձ ունեցող, օտար լեզու իմացող և զարգացած արտահանող երիտասարդ։
-            </p>
-        </div>
-    </section>
-    <section class="first_phase container">
-        <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">Առաջին փուլ</h2>
-        <div class="img_text">
-            <p class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">
-                Առաջին փուլում, ուսանողները նախնական գիտելիքներ են ստանում ինժեներիայից, ուսումնասիրելով ամենա պարզագույն ծրագրերը:
-            </p>
-            <img class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/4.jpg" alt="image">
-        </div>
-        <div class="stages">
-            <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
-                <img src="./assets/images/icons/lego-mindstorm%201.png" alt="image"/>
-                <div class="stage_text_button">
-                    <div>
-                        <button class="btn btn-secondary">
-                            Lego Mindstorm
-                        </button>
-                        <ul>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsumLorem upsumLorem</span>
-                            </li>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="duration">
-                        2-3 ամիս
-                    </div>
-                </div>
-            </div>
-            <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
-                <img src="./assets/images/icons/cnc-2.png" alt="image"/>
-                <div class="stage_text_button">
-                    <div>
-                        <button class="btn btn-secondary">
-                            CNC
-                        </button>
-                        <ul>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="duration">
-                        2-3 ամիս
-                    </div>
-                </div>
-            </div>
-            <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
-                <img src="./assets/images/icons/scratch-3.png" alt="image"/>
-                <div class="stage_text_button">
-                    <div>
-                        <button class="btn btn-secondary">
-                            Scratch
-                        </button>
-                        <ul>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="duration">
-                        2-3 ամիս
-                    </div>
-                </div>
-            </div>
-            <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
-                <img src="./assets/images/icons/freecad4.png" alt="image"/>
-                <div class="stage_text_button">
-                    <div>
-                        <button class="btn btn-secondary">
-                            3d modeling
-                        </button>
-                        <ul>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="duration">
-                        2-3 ամիս
-                    </div>
-                </div>
-            </div>
-            <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
-                <img src="./assets/images/icons/arduino-5.png" alt="image"/>
-                <div class="stage_text_button">
-                    <div>
-                        <button class="btn btn-secondary">
-                            Electronics
-                        </button>
-                        <ul>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="duration">
-                        2-3 ամիս
-                    </div>
-                </div>
-            </div>
-            <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
-                <img src="./assets/images/icons/3d-printing6.png" alt="image"/>
-                <div class="stage_text_button">
-                    <div>
-                        <button class="btn btn-secondary">
-                            3d printing
-                        </button>
-                        <ul>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                            <li class="icon-text">
-                                <svg class="lightning-small">
-                                    <use xlink:href="#lightning-small"></use>
-                                </svg>
-                                <span>Lorem upsum</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="duration">
-                        2-3 ամիս
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="second_phase container">
-        <h2 class="wow fadeIn " data-wow-duration="4s" data-wow-delay="3s">Երկրորդ փուլ</h2>
-        <div class="row-1">
-            <div class="counter_block wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">
-                <div class="counter_row">
-                    <div class="counter_wrapper">
-                        <div class="counterPlus">
-                            <div class="counterForFixingWidth"></div>
-                            <div class="counter" id="counter">0</div>
-                        </div>
-                        <span>ոլորտ</span>
-                    </div>
-                    <div class="counter_next_text ">
-                        Երկրորդ փուլում, ստանում են մասնագիտական ու ժամանակին ակտուալ գիտելիք
-                    </div>
-                </div>
-            </div>
-            <div class="text_block wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s">
-                <p>
-                    Երկրորդ փուլի արդյունքում կունենանք փայլուն ինժեներներ, որոնք կկարողանան, ոչ մի այն էս անել , այլ էն մյուսն էլ անել
+    <div  id="program" class=" nav_section">
+        <section class="educational_program container">
+            <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">Կրթական ծրագիր</h2>
+            <div class="img_text">
+                <img class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/3.jpg" alt="image">
+                <p class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" >
+                    Cavelab-ի կրթական  ծրագիրը համալիր կրթական միջոցառումների շարք է և կազմված է 2 փուլից: Փուլերից յուրաքանչյուրը կոնկրետ խնդիր է լուծում, որի արդյունքում որպես «պրոդուկտ» ունենում ենք բավարար աշխատանքային փորձ ունեցող, օտար լեզու իմացող և զարգացած արտահանող երիտասարդ։
                 </p>
             </div>
-        </div>
-        <div class="row-2 wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
-            <img src="./assets/images/5.jpg" alt="image"/>
-        </div>
-        <div class="join_us wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
-            <h3>Միացիր մեր դասընթացին</h3>
-            <button class="btn btn-main">Գրանցվել</button>
-        </div>
-    </section>
-    <section id="about" class="about_us container">
+        </section>
+        <section class="first_phase container">
+            <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">Առաջին փուլ</h2>
+            <div class="img_text">
+                <p class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">
+                    Առաջին փուլում, ուսանողները նախնական գիտելիքներ են ստանում ինժեներիայից, ուսումնասիրելով ամենա պարզագույն ծրագրերը:
+                </p>
+                <img class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/4.jpg" alt="image">
+            </div>
+            <div class="stages">
+                <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
+                    <img src="./assets/images/icons/lego-mindstorm%201.png" alt="image">
+                    <div class="stage_text_button">
+                        <div>
+                            <button class="btn btn-secondary">
+                                Lego Mindstorm
+                            </button>
+                            <ul>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsumLorem upsumLorem</span>
+                                </li>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="duration">
+                            2-3 ամիս
+                        </div>
+                    </div>
+                </div>
+                <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
+                    <img src="./assets/images/icons/cnc-2.png" alt="image">
+                    <div class="stage_text_button">
+                        <div>
+                            <button class="btn btn-secondary">
+                                CNC
+                            </button>
+                            <ul>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="duration">
+                            2-3 ամիս
+                        </div>
+                    </div>
+                </div>
+                <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
+                    <img src="./assets/images/icons/scratch-3.png" alt="image">
+                    <div class="stage_text_button">
+                        <div>
+                            <button class="btn btn-secondary">
+                                Scratch
+                            </button>
+                            <ul>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="duration">
+                            2-3 ամիս
+                        </div>
+                    </div>
+                </div>
+                <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
+                    <img src="./assets/images/icons/freecad4.png" alt="image">
+                    <div class="stage_text_button">
+                        <div>
+                            <button class="btn btn-secondary">
+                                3d modeling
+                            </button>
+                            <ul>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="duration">
+                            2-3 ամիս
+                        </div>
+                    </div>
+                </div>
+                <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
+                    <img src="./assets/images/icons/arduino-5.png" alt="image">
+                    <div class="stage_text_button">
+                        <div>
+                            <button class="btn btn-secondary">
+                                Electronics
+                            </button>
+                            <ul>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="duration">
+                            2-3 ամիս
+                        </div>
+                    </div>
+                </div>
+                <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
+                    <img src="./assets/images/icons/3d-printing6.png" alt="image">
+                    <div class="stage_text_button">
+                        <div>
+                            <button class="btn btn-secondary">
+                                3d printing
+                            </button>
+                            <ul>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                                <li class="icon-text">
+                                    <svg class="lightning-small">
+                                        <use xlink:href="#lightning-small"></use>
+                                    </svg>
+                                    <span>Lorem upsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="duration">
+                            2-3 ամիս
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second_phase container">
+            <h2 class="wow fadeIn " data-wow-duration="4s" data-wow-delay="3s">Երկրորդ փուլ</h2>
+            <div class="row-1">
+                <div class="counter_block wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">
+                    <div class="counter_row">
+                        <div class="counter_wrapper">
+                            <div class="counterPlus">
+                                <div class="counterForFixingWidth"></div>
+                                <div class="counter" id="counter">0</div>
+                            </div>
+                            <span>ոլորտ</span>
+                        </div>
+                        <div class="counter_next_text ">
+                            Երկրորդ փուլում, ստանում են մասնագիտական ու ժամանակին ակտուալ գիտելիք
+                        </div>
+                    </div>
+                </div>
+                <div class="text_block wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s">
+                    <p>
+                        Երկրորդ փուլի արդյունքում կունենանք փայլուն ինժեներներ, որոնք կկարողանան, ոչ մի այն էս անել , այլ էն մյուսն էլ անել
+                    </p>
+                </div>
+            </div>
+            <div class="row-2 wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
+                <img src="./assets/images/5.jpg" alt="image">
+            </div>
+            <div class="join_us wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
+                <h3>Միացիր մեր դասընթացին</h3>
+                <button class="btn btn-main">Գրանցվել</button>
+            </div>
+        </section>
+    </div>
+
+    <section id="about" class="about_us container nav_section">
         <h2 class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s">Մեր մասին</h2>
         <div class="about_us_row">
-            <img  class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" src="assets/images/6.jpg" alt="image"/>
+            <img  class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" src="assets/images/6.jpg" alt="image">
             <div  class="text_block wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s">
                 <P>
                     CaveLab- ը հիմնադրվել է Մունք տեխնոդպրոցի շրջանավարտների և ոլորտի մասնագետ Հարությունի կողմից: CaveLab-ի նպատակն է
@@ -360,7 +363,7 @@
             <h2 class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s">Դասավանդող անձնակազմը</h2>
             <div class="teachers">
                 <div class="teacher wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
-                    <img src="./assets/images/teacher1.jpg" alt="image"/>
+                    <img src="./assets/images/teacher1.jpg" alt="image">
                     <div class="about_teacher">
                         <div class="teacher_name">Մարատ Չոբանյան</div>
                         <div class="teacher_role">Ինժեներ</div>
@@ -378,7 +381,7 @@
                     </div>
                 </div>
                 <div class="teacher wow fadeInUp"  data-wow-duration="2s" data-wow-delay="2s">
-                    <img src="./assets/images/teacher2.jpg" alt="image"/>
+                    <img src="./assets/images/teacher2.jpg" alt="image">
                     <div class="about_teacher">
                         <div class="teacher_name">Ակակիյ Ակակիեվիչ</div>
                         <div class="teacher_role">Ինժեներ</div>
@@ -396,7 +399,7 @@
                     </div>
                 </div>
                 <div class="teacher wow fadeInUp"  data-wow-duration="2s" data-wow-delay="3s">
-                    <img src="./assets/images/teacher3.jpg" alt="image"/>
+                    <img src="./assets/images/teacher3.jpg" alt="image">
                     <div class="about_teacher">
                         <div class="teacher_name">Մառլեն Չալիկյան</div>
                         <div class="teacher_role">Ինժեներ</div>
@@ -430,7 +433,7 @@
             <li>12-18 տարեկան երեխաների համար </li>
         </ul>
     </div>
-    <section id="conditions" class="conditions container">
+    <section id="conditions" class="conditions container nav_section">
         <h2 class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s">
             ԿՐԹԱԿԱՆ ՓՈՒԼԵՐՆ ՈՒ ՊԱՅՄԱՆՆԵՐԸ
         </h2>
@@ -528,7 +531,7 @@
 
     </section>
 </main>
-<footer id="contacts">
+<footer id="contacts" class="nav_section">
     <div class="">
         <div class="contact_row container wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s">
             <div class="number_column">
@@ -538,7 +541,6 @@
                 <p>
                     Questions regarding purchase, payment and course content
                 </p>
-
             </div>
             <div class="email_column">
                 <p>
@@ -549,17 +551,22 @@
                 </a>
             </div>
             <div class="soc_column">
-                <svg class="">
-                    <use xlink:href="#facebook_footer"></use>
-                </svg>
-                <svg class="">
-                    <use xlink:href="#whatsApp"></use>
-                </svg>
-                <svg class="">
-                    <use xlink:href="#instagram"></use>
-                </svg>
+                <a href="https://www.facebook.com/">
+                    <svg class="">
+                        <use xlink:href="#facebook_footer"></use>
+                    </svg>
+                </a>
+                <a href="https://www.whatsapp.com/">
+                    <svg class="">
+                        <use xlink:href="#whatsApp"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <svg class="">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
             </div>
-
         </div>
         <div class="map_row wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
             <div class="container">
