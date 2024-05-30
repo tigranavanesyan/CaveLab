@@ -1,4 +1,31 @@
 new WOW().init();
+let slider1 = new Swiper('.swiper1',{
+    slidesPerView: 1,
+    spaceBetween: 5,
+    autoplay: {
+        delay: 2000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+    },
+    speed: 2000,
+    breakpoints: {
+        320: {
+            slidesPerView: 1.2
+        },
+        400: {
+            slidesPerView: 1.5
+        },
+        500: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 2.5
+        },
+        992: {
+            slidesPerView: 3
+        },
+    }
+});
 setTimeout(()=>{
     const firstScreen = document.querySelector(".first_screen")
     firstScreen.style.gridTemplateColumns = "3fr 2fr"
@@ -28,6 +55,28 @@ function addAnimation() {
         });
     });
 }
+/*-----------burger start---------------*/
+const burgerIcon = document.querySelector('.burger_icon')
+const menu = document.querySelector('.menu')
+burgerIcon.addEventListener('click',(e)=>{
+    if(!e.currentTarget.classList.contains("active")){
+        openMenu()
+    } else {
+        closeMenu()
+    }
+})
+function openMenu(){
+    burgerIcon.classList.add('active')
+    document.body.classList.add("stop-scrolling")
+    menu.classList.remove('hide_menu')
+}
+function closeMenu(){
+    burgerIcon.classList.remove('active')
+    document.body.classList.remove("stop-scrolling")
+    menu.classList.add('hide_menu')
+}
+
+/*-----------burger end---------------*/
 
 document.addEventListener("DOMContentLoaded", function() {
     let counterForFixingWidth = document.querySelector(".counterForFixingWidth")
@@ -48,7 +97,32 @@ document.addEventListener("DOMContentLoaded", function() {
             counter1.textContent = target1
         }
     }
-    updateCounter()
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateCounter();
+                observer.unobserve(entry.target); // Stop observing after the counter starts
+            }
+        });
+    };
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(counterForFixingWidth);
+
+
+    if(!window.matchMedia("(max-width: 1024px)").matches){
+        console.log(slider1)
+        slider1.activeIndex=0
+        slider1.autoplay.stop()
+    } else {
+        slider1.autoplay.start()
+    }
 });
 
 // Fixed header and active link functionality
@@ -59,8 +133,11 @@ const navLinks = document.querySelectorAll(".menu li a")
 
 navLinks.forEach((l)=>{
     l.addEventListener('click',()=>{
-        setTimeout(()=>{
+        closeMenu()
+
+        setTimeout(async ()=>{
             fixedHeader.style.top = "-85px"
+
         },1000)
     })
 })
@@ -93,4 +170,25 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+const onresize = function(e) {
+    let menuItemsBlock = document.querySelector(".menu_items")
 
+    if(!window.matchMedia("(max-width: 1024px)").matches && burgerIcon.classList.contains("active")){
+        closeMenu()
+    }
+    if(!window.matchMedia("(max-width: 1024px)").matches){
+        slider1.activeIndex=0
+        slider1.autoplay.stop()
+    } else {
+        slider1.autoplay.start()
+    }
+}
+window.addEventListener("resize", onresize);
+
+let stages = document.querySelector('.stages')
+stages.addEventListener('mouseenter',()=>{
+    slider1.autoplay.stop()
+})
+stages.addEventListener('mouseleave',()=>{
+    slider1.autoplay.start()
+})

@@ -9,14 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="icon" href="./assets/images/logo.png">
     <title>CaveLab</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
 </head>
 <body>
-
 <div>
     <svg  style="display: none;">
         <symbol id="lightning" xmlns="http://www.w3.org/2000/svg" width="29" height="46" viewBox="0 0 29 46" fill="none">
@@ -55,7 +54,7 @@
         <symbol id="lessons" xmlns="http://www.w3.org/2000/svg" width="50" height="44" viewBox="0 0 50 44" fill="none">
             <path d="M8.96436 22.0739H41.3888V34.8239C41.3888 35.1996 41.218 35.56 40.914 35.8256C40.6099 36.0913 40.1976 36.2406 39.7676 36.2406H10.5856C10.1556 36.2406 9.74324 36.0913 9.4392 35.8256C9.13516 35.56 8.96436 35.1996 8.96436 34.8239V22.0739ZM33.2827 10.7406H39.7676C40.1976 10.7406 40.6099 10.8898 40.914 11.1555C41.218 11.4212 41.3888 11.7815 41.3888 12.1572V19.2406H8.96436V12.1572C8.96436 11.7815 9.13516 11.4212 9.4392 11.1555C9.74324 10.8898 10.1556 10.7406 10.5856 10.7406H17.0705V7.90723H20.3129V10.7406H30.0403V7.90723H33.2827V10.7406Z" fill="#F5F5F5"/>
         </symbol>
-        <symbol id="whatsApp" xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37" fill="none">
+        <symbol id="whatsApp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 37" fill="none">
             <g clip-path="url(#clip0_261_1737)">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8998 3.08325C10.3852 3.08325 3.48315 9.98529 3.48315 18.4999C3.48315 21.4137 4.29253 24.1424 5.70007 26.4673L4.3249 31.1416C4.24595 31.41 4.24075 31.6947 4.30986 31.9657C4.37898 32.2368 4.51984 32.4843 4.71766 32.6821C4.91547 32.8799 5.16293 33.0208 5.43401 33.0899C5.70508 33.159 5.98978 33.1538 6.25815 33.0748L10.9325 31.6997C13.3354 33.1536 16.0912 33.9204 18.8998 33.9166C27.4144 33.9166 34.3165 27.0145 34.3165 18.4999C34.3165 9.98529 27.4144 3.08325 18.8998 3.08325ZM15.4126 21.9887C18.5314 25.106 21.5083 25.5176 22.5597 25.5561C24.1584 25.6147 25.7155 24.3937 26.3214 22.9769C26.3979 22.8007 26.4257 22.6071 26.4018 22.4165C26.3779 22.2258 26.3033 22.0451 26.1857 21.8931C25.3409 20.814 24.1985 20.0385 23.0824 19.2677C22.8493 19.1065 22.5629 19.0419 22.2833 19.0873C22.0036 19.1327 21.7524 19.2847 21.5823 19.5113L20.6573 20.9219C20.6087 20.9977 20.5329 21.0521 20.4455 21.0739C20.3581 21.0957 20.2656 21.0832 20.1871 21.039C19.5597 20.6798 18.6454 20.0693 17.9887 19.4126C17.3319 18.7558 16.7584 17.8833 16.4362 17.2959C16.3963 17.2213 16.3847 17.1347 16.4037 17.0522C16.4227 16.9697 16.471 16.8969 16.5395 16.8473L17.964 15.7897C18.1673 15.6129 18.2985 15.3676 18.3326 15.1003C18.3667 14.8331 18.3014 14.5627 18.149 14.3405C17.4584 13.3292 16.6536 12.0434 15.4866 11.1909C15.336 11.0817 15.1595 11.0137 14.9746 10.9934C14.7897 10.9731 14.6028 11.0013 14.4321 11.0753C13.0137 11.6827 11.7866 13.2398 11.8452 14.8415C11.8837 15.893 12.2953 18.8699 15.4126 21.9887Z" fill="#F5F5F5"/>
             </g>
@@ -65,10 +64,10 @@
                 </clipPath>
             </defs>
         </symbol>
-        <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37" fill="none">
+        <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 37" fill="none">
             <path d="M20.885 3.08325C22.6193 3.08788 23.4996 3.09713 24.2597 3.11871L24.5588 3.1295C24.9041 3.14184 25.2448 3.15725 25.6564 3.17575C27.2968 3.25284 28.416 3.51184 29.398 3.89263C30.4155 4.28421 31.2727 4.81454 32.1299 5.67017C32.9138 6.44084 33.5204 7.37308 33.9074 8.402C34.2882 9.38404 34.5472 10.5033 34.6243 12.1452C34.6428 12.5553 34.6582 12.896 34.6705 13.2428L34.6798 13.5419C34.7029 14.3004 34.7122 15.1807 34.7153 16.9151L34.7168 18.0652V20.0848C34.7206 21.2093 34.7088 22.3337 34.6813 23.4579L34.6721 23.757C34.6598 24.1039 34.6443 24.4446 34.6258 24.8547C34.5488 26.4965 34.2867 27.6143 33.9074 28.5978C33.5215 29.6273 32.9148 30.5598 32.1299 31.3297C31.359 32.1133 30.4268 32.7199 29.398 33.1072C28.416 33.488 27.2968 33.747 25.6564 33.8241C25.2906 33.8413 24.9247 33.8567 24.5588 33.8703L24.2597 33.8796C23.4996 33.9012 22.6193 33.912 20.885 33.915L19.7349 33.9166H17.7168C16.5918 33.9205 15.4668 33.9086 14.3421 33.8811L14.043 33.8719C13.6771 33.858 13.3112 33.8421 12.9454 33.8241C11.305 33.747 10.1858 33.488 9.20221 33.1072C8.17341 32.7208 7.24154 32.1141 6.47192 31.3297C5.68728 30.5593 5.08014 29.627 4.69283 28.5978C4.31204 27.6158 4.05304 26.4965 3.97596 24.8547C3.95878 24.4889 3.94337 24.123 3.92971 23.757L3.922 23.4579C3.89359 22.3338 3.88074 21.2093 3.88346 20.0848V16.9151C3.87916 15.7906 3.89046 14.6661 3.91737 13.5419L3.92817 13.2428C3.9405 12.896 3.95592 12.5553 3.97442 12.1452C4.0515 10.5033 4.3105 9.38559 4.69129 8.402C5.07843 7.37202 5.68678 6.4395 6.47346 5.67017C7.24289 4.88619 8.17414 4.27957 9.20221 3.89263C10.1858 3.51184 11.3035 3.25284 12.9454 3.17575C13.3555 3.15725 13.6977 3.14184 14.043 3.1295L14.3421 3.12025C15.4663 3.09286 16.5908 3.08104 17.7153 3.08479L20.885 3.08325ZM19.3001 10.7916C17.2557 10.7916 15.2951 11.6037 13.8495 13.0493C12.4039 14.4949 11.5918 16.4555 11.5918 18.4999C11.5918 20.5443 12.4039 22.5049 13.8495 23.9505C15.2951 25.3961 17.2557 26.2083 19.3001 26.2083C21.3445 26.2083 23.3051 25.3961 24.7507 23.9505C26.1963 22.5049 27.0085 20.5443 27.0085 18.4999C27.0085 16.4555 26.1963 14.4949 24.7507 13.0493C23.3051 11.6037 21.3445 10.7916 19.3001 10.7916ZM19.3001 13.8749C19.9075 13.8748 20.5089 13.9943 21.0701 14.2267C21.6313 14.459 22.1412 14.7996 22.5707 15.229C23.0003 15.6584 23.341 16.1682 23.5735 16.7293C23.8061 17.2904 23.9258 17.8918 23.9259 18.4992C23.926 19.1065 23.8065 19.708 23.5741 20.2691C23.3418 20.8303 23.0012 21.3402 22.5718 21.7697C22.1424 22.1993 21.6326 22.54 21.0715 22.7726C20.5104 23.0051 19.909 23.1248 19.3017 23.1249C18.075 23.1249 16.8987 22.6376 16.0313 21.7703C15.1639 20.9029 14.6767 19.7265 14.6767 18.4999C14.6767 17.2733 15.1639 16.0969 16.0313 15.2296C16.8987 14.3622 18.075 13.8749 19.3017 13.8749M27.3954 8.47909C26.8843 8.47909 26.3942 8.68212 26.0328 9.04352C25.6714 9.40491 25.4683 9.89508 25.4683 10.4062C25.4683 10.9173 25.6714 11.4074 26.0328 11.7688C26.3942 12.1302 26.8843 12.3333 27.3954 12.3333C27.9065 12.3333 28.3967 12.1302 28.7581 11.7688C29.1195 11.4074 29.3225 10.9173 29.3225 10.4062C29.3225 9.89508 29.1195 9.40491 28.7581 9.04352C28.3967 8.68212 27.9065 8.47909 27.3954 8.47909Z" fill="#F5F5F5"/>
         </symbol>
-        <symbol id="facebook_footer" xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+        <symbol id="facebook_footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" fill="none">
             <path d="M33.9168 18.4999C33.9168 9.98992 27.0102 3.08325 18.5002 3.08325C9.99016 3.08325 3.0835 9.98992 3.0835 18.4999C3.0835 25.9616 8.38683 32.1745 15.4168 33.6083V23.1249H12.3335V18.4999H15.4168V14.6458C15.4168 11.6703 17.8372 9.24992 20.8127 9.24992H24.6668V13.8749H21.5835C20.7356 13.8749 20.0418 14.5687 20.0418 15.4166V18.4999H24.6668V23.1249H20.0418V33.8395C27.8272 33.0687 33.9168 26.5012 33.9168 18.4999Z" fill="#F5F5F5"/>
         </symbol>
     </svg>
@@ -80,7 +79,7 @@
             <Span>CaveLab</Span>
         </a>
         <nav>
-            <ul class="menu">
+            <ul class="menu  hide_menu">
                 <li><a href="#program">Կրթական ծրագիր</a></li>
                 <li><a href="#about">Մեր մասին</a></li>
                 <li><a href="#conditions">Պայմաններ</a></li>
@@ -92,6 +91,9 @@
             <li><a href="#">Ру</a></li>
             <li class="arm"><a href="#">Հայ</a></li>
         </ul>
+        <div class="burger_icon">
+            <span></span>
+        </div>
     </div>
 </header>
 <main>
@@ -151,170 +153,174 @@
                 </p>
                 <img class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/4.jpg" alt="image">
             </div>
-            <div class="stages">
-                <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
-                    <img src="./assets/images/icons/lego-mindstorm%201.png" alt="image">
-                    <div class="stage_text_button">
-                        <div>
-                            <button class="btn btn-secondary">
-                                Lego Mindstorm
-                            </button>
-                            <ul>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsumLorem upsumLorem</span>
-                                </li>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="duration">
-                            2-3 ամիս
-                        </div>
-                    </div>
-                </div>
-                <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
-                    <img src="./assets/images/icons/cnc-2.png" alt="image">
-                    <div class="stage_text_button">
-                        <div>
-                            <button class="btn btn-secondary">
-                                CNC
-                            </button>
-                            <ul>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="duration">
-                            2-3 ամիս
+
+            <div class="swiper1">
+                <div class="stages swiper-wrapper">
+                    <div class="stage wow fadeInLeft swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
+                        <img src="./assets/images/icons/lego-mindstorm%201.png" alt="image">
+                        <div class="stage_text_button">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    Lego Mindstorm
+                                </button>
+                                <ul>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsumLorem upsumLorem</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="duration">
+                                2-3 ամիս
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
-                    <img src="./assets/images/icons/scratch-3.png" alt="image">
-                    <div class="stage_text_button">
-                        <div>
-                            <button class="btn btn-secondary">
-                                Scratch
-                            </button>
-                            <ul>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="duration">
-                            2-3 ամիս
-                        </div>
-                    </div>
-                </div>
-                <div class="stage wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" >
-                    <img src="./assets/images/icons/freecad4.png" alt="image">
-                    <div class="stage_text_button">
-                        <div>
-                            <button class="btn btn-secondary">
-                                3d modeling
-                            </button>
-                            <ul>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="duration">
-                            2-3 ամիս
+                    <div class="stage wow fadeInLeft swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
+                        <img src="./assets/images/icons/cnc-2.png" alt="image">
+                        <div class="stage_text_button">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    CNC
+                                </button>
+                                <ul>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="duration">
+                                2-3 ամիս
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
-                    <img src="./assets/images/icons/arduino-5.png" alt="image">
-                    <div class="stage_text_button">
-                        <div>
-                            <button class="btn btn-secondary">
-                                Electronics
-                            </button>
-                            <ul>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="duration">
-                            2-3 ամիս
+                    <div class="stage wow fadeInRight swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
+                        <img src="./assets/images/icons/scratch-3.png" alt="image">
+                        <div class="stage_text_button">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    Scratch
+                                </button>
+                                <ul>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="duration">
+                                2-3 ամիս
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="stage wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s" >
-                    <img src="./assets/images/icons/3d-printing6.png" alt="image">
-                    <div class="stage_text_button">
-                        <div>
-                            <button class="btn btn-secondary">
-                                3d printing
-                            </button>
-                            <ul>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                                <li class="icon-text">
-                                    <svg class="lightning-small">
-                                        <use xlink:href="#lightning-small"></use>
-                                    </svg>
-                                    <span>Lorem upsum</span>
-                                </li>
-                            </ul>
+                    <div class="stage wow fadeInLeft swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
+                        <img src="./assets/images/icons/freecad4.png" alt="image">
+                        <div class="stage_text_button">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    3d modeling
+                                </button>
+                                <ul>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="duration">
+                                2-3 ամիս
+                            </div>
                         </div>
-                        <div class="duration">
-                            2-3 ամիս
+                    </div>
+                    <div class="stage wow fadeInRight swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
+                        <img src="./assets/images/icons/arduino-5.png" alt="image">
+                        <div class="stage_text_button">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    Electronics
+                                </button>
+                                <ul>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="duration">
+                                2-3 ամիս
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage wow fadeInRight swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
+                        <img src="./assets/images/icons/3d-printing6.png" alt="image">
+                        <div class="stage_text_button">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    3d printing
+                                </button>
+                                <ul>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Lorem upsum</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="duration">
+                                2-3 ամիս
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
         <section class="second_phase container">
             <h2 class="wow fadeIn " data-wow-duration="4s" data-wow-delay="3s">Երկրորդ փուլ</h2>
@@ -418,19 +424,17 @@
                 </div>
             </div>
         </article>
-
-
     </section>
     <div class="scroller" data-speed="fast">
         <ul class="tag-list scroller__inner">
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
-            <li>12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
         </ul>
     </div>
     <section id="conditions" class="conditions container nav_section">
@@ -442,25 +446,25 @@
                 <h3>ԱՌԱՋԻՆ ՓՈՒԼ</h3>
                 <div class="conditions_lists">
                     <ul class="list">
-                        <li class="icon-text">
+                        <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
                             <span>keterav hinchn stnan</span>
                         </li>
-                        <li class="icon-text">
+                        <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
                             <span>keterav hinchn stnan</span>
                         </li>
-                        <li class="icon-text">
+                        <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
                             <span>keterav hinchn stnan</span>
                         </li>
-                        <li class="icon-text">
+                        <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
@@ -492,25 +496,25 @@
                 <h3 class="change_color">Երկրորդ ՓՈՒԼ</h3>
                 <div class="conditions_lists change_color">
                     <ul class="list">
-                        <li class="icon-text">
+                        <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
                             <span>keterav hinchn stnan</span>
                         </li>
-                        <li class="icon-text">
+                        <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
                             <span>keterav hinchn stnan</span>
                         </li>
-                        <li class="icon-text">
+                        <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
                             <span>keterav hinchn stnan</span>
                         </li>
-                        <li class="icon-text">
+                        <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
@@ -599,6 +603,7 @@
     </div>
 </footer>
 <script src="./assets/js/wow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
