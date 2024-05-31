@@ -224,8 +224,10 @@ header{
 
 
 .first_screen{
-    margin-top: 110px;
-    margin-bottom: 80px;
+    /*margin-top: 110px;70*/
+    margin-top: clamp(60px,calc(60px + (110 - 60) * ((100vw - 768px) / (1320 - 768))),110px);
+    /*margin-bottom: 40px;*/
+    margin-bottom: clamp(30px,calc(30px + (80 - 30) * ((100vw - 768px) / (1320 - 768))),80px);
     display: grid;
     grid-template-columns: 3fr 0fr;
     gap: 10px;
@@ -384,7 +386,7 @@ header{
 }
 
 .educational_program{
-    margin-top: 80px;
+    margin-top: clamp(30px,calc(30px + (80 - 30) * ((100vw - 768px) / (1320 - 768))),80px);
 }
 .educational_program h2{
     font-family: Oldtime;
@@ -395,7 +397,8 @@ header{
     line-height: normal;
     letter-spacing: -3.8px;
     text-transform: uppercase;
-    margin-bottom: 45px;
+    /*margin-bottom: 45px;*/
+    margin-bottom: clamp(30px,calc(30px + (45 - 30) * ((100vw - 768px) / (1320 - 768))),45px);
 }
 .img_text{
     height: 350px;
@@ -432,8 +435,8 @@ header{
     line-height: normal;
     letter-spacing: -2.5px;
     text-transform: uppercase;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin-top: clamp(30px,calc(30px + (80 - 30) * ((100vw - 768px) / (1320 - 768))),80px);
+    margin-bottom: clamp(15px,calc(15px + (30 - 15) * ((100vw - 768px) / (1320 - 768))),30px);
 }
 .stages{
     margin-top: 10px;
@@ -522,7 +525,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 45px;
+    padding-top: clamp(20px,calc(20px + (45 - 20) * ((100vw - 768px) / (1320 - 768))),45px);
 }
 .second_phase h2{
     color: var(--brown2);
@@ -608,6 +611,9 @@ header{
 .text_block p{
     max-width: 520px;
 }
+.row-2{
+    height: 330px;
+}
 .join_us{
     display: flex;
     flex-direction: column;
@@ -619,7 +625,7 @@ header{
     background-size: cover;
     border-radius: 20px;
     height: 260px;
-    margin-top: 67px;
+    margin-top: clamp(20px,calc(20px + (67 - 20) * ((100vw - 768px) / (1320 - 768))),67px);
 }
 .join_us h3{
     color: var(--white);
@@ -631,7 +637,7 @@ header{
 
 
 .about_us{
-    margin-top: 80px;
+    margin-top: clamp(30px,calc(30px + (80 - 30) * ((100vw - 768px) / (1320 - 768))),80px);
 
 }
 .about_us h2{
@@ -665,15 +671,15 @@ header{
     flex-basis: 50%;
 }
 .teaches_block{
-    margin-top: 80px;
-    margin-bottom: 85px;
+    margin-top: clamp(30px,calc(30px + (80 - 30) * ((100vw - 768px) / (1320 - 768))),80px);
+    margin-bottom: clamp(30px,calc(30px + (85 - 30) * ((100vw - 768px) / (1320 - 768))),85px);
 }
 .teachers{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-top: 50px;
+    /*gap: 10px;*/
+    margin-top: clamp(30px,calc(30px + (50 - 30) * ((100vw - 768px) / (1320 - 768))),50px);
 }
 .teacher{
     display: flex;
@@ -734,8 +740,8 @@ svg.linkedin_icon{
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    padding-bottom: 50px;
-    margin-top: 90px;
+    padding-bottom: clamp(30px,calc(30px + (50 - 30) * ((100vw - 768px) / (1320 - 768))),50px);
+    margin-top: clamp(40px,calc(40px + (90 - 40) * ((100vw - 768px) / (1320 - 768))),90px);
 
 
 }
@@ -782,7 +788,9 @@ svg.linkedin_icon{
     background-color: var(--brown2);
     border-radius: 20px;
     height: 610px;
-    padding: 65px 30px 40px 70px;
+    /*padding: 65px 30px 40px 70px;*/
+    padding: clamp(30px,calc(30px + (60 - 30) * ((100vw - 768px) / (1320 - 768))),60px)
+    clamp(15px,calc(15px + (45 - 15) * ((100vw - 768px) / (1320 - 768))),45px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -938,6 +946,10 @@ footer{
     overflow-y: hidden;
 
 }
+.legal2{
+    display: none;
+}
+
 .info_column{
     display: flex;
     flex-direction: column;
@@ -1042,30 +1054,51 @@ footer{
         gap: 40px;
     }
     .tell{
-        font-size: 42px;
+        font-size: clamp(18px,calc(18px + (42 - 18) * ((100vw - 320px) / (1024 - 320))),42px);
     }
     .number_column p{
-        font-size: 20px;
+        font-size: clamp(9px,calc(9px + (20 - 9) * ((100vw - 320px) / (1024 - 320))),20px);
     }
     .email_column a{
-        font-size: 32px;
+        font-size: clamp(14px,calc(14px + (32 - 14) * ((100vw - 320px) / (1024 - 320))),32px);
     }
     .email_column{
         order: 3;
         max-width: 90%;
     }
+    .email_column p{
+        font-size: clamp(11px,calc(11px + (26 - 11) * ((100vw - 320px) / (1024 - 320))),26px);
+    }
     .soc_column{
         margin-left: auto;
         position: relative;
-        top: 50px;
+        top: clamp(20px,calc(20px + (50 - 20) * ((100vw - 320px) / (1024 - 320))),50px);
     }
     .soc_column svg{
-        height: 48px;
-        width: 48px;
+        height: clamp(20px,calc(20px + (48 - 20) * ((100vw - 320px) / (1024 - 320))),48px);
+        width: clamp(20px,calc(20px + (48 - 20) * ((100vw - 320px) / (1024 - 320))),48px);
     }
     .copy_right_row{
-        font-size: 24px;
+        font-size: clamp(10px,calc(10px + (24 - 10) * ((100vw - 320px) / (1024 - 320))),24px);
+        display: flex;
+        flex-direction: column-reverse;
     }
+    .legal1{
+        display: none;
+    }
+    .legal2{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .info_column p{
+        margin-top: 50px;
+    }
+    .cookies_column{
+        font-size: clamp(10px,calc(10px + (24 - 10) * ((100vw - 320px) / (1024 - 320))),24px);
+        width: 95%;
+    }
+
+
     .stages{
         display: flex;
         min-width: 0;
@@ -1084,6 +1117,10 @@ footer{
     .teacher{
         width: 400px;
         flex-shrink: 0;
+        cursor: grab;
+    }
+    .teacher:active{
+        cursor: grabbing;
     }
     .about_us_row{
         flex-direction: column;
@@ -1159,6 +1196,7 @@ footer{
     }
     .img_text>p{
         font-size: clamp(12px,calc(12px + (20 - 12) * ((100vw - 320px) / (768 - 320))),20px);
+        height: 170px;
     }
     .first_phase>h2{
         font-size: clamp(20px,calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320))),40px);
@@ -1222,6 +1260,9 @@ footer{
     .row-1{
         display: flex;
         flex-direction: column;
+    }
+    .row-1>div{
+        height: 220px;
     }
 
 

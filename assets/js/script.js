@@ -26,6 +26,33 @@ let slider1 = new Swiper('.swiper1',{
         },
     }
 });
+let slider2 = new Swiper('.swiper2',{
+    slidesPerView: 1,
+    spaceBetween: 5,
+    autoplay: {
+        delay: 2000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+    },
+    speed: 2000,
+    breakpoints: {
+        320: {
+            slidesPerView: 1
+        },
+        400: {
+            slidesPerView: 1.2
+        },
+        500: {
+            slidesPerView: 1.3
+        },
+        768: {
+            slidesPerView: 1.5
+        },
+        992: {
+            slidesPerView: 3
+        },
+    }
+});
 setTimeout(()=>{
     const firstScreen = document.querySelector(".first_screen")
     firstScreen.style.gridTemplateColumns = "3fr 2fr"
@@ -117,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     if(!window.matchMedia("(max-width: 1024px)").matches){
-        console.log(slider1)
         slider1.activeIndex=0
         slider1.autoplay.stop()
     } else {
@@ -179,8 +205,11 @@ const onresize = function(e) {
     if(!window.matchMedia("(max-width: 1024px)").matches){
         slider1.activeIndex=0
         slider1.autoplay.stop()
+        slider2.activeIndex=0
+        slider2.autoplay.stop()
     } else {
         slider1.autoplay.start()
+        slider2.autoplay.start()
     }
 }
 window.addEventListener("resize", onresize);
@@ -191,4 +220,12 @@ stages.addEventListener('mouseenter',()=>{
 })
 stages.addEventListener('mouseleave',()=>{
     slider1.autoplay.start()
+})
+
+let teachers = document.querySelector('.swiper2')
+teachers.addEventListener('mouseenter',()=>{
+    slider2.autoplay.stop()
+})
+teachers.addEventListener('mouseleave',()=>{
+    slider2.autoplay.start()
 })

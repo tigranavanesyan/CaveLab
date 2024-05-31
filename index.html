@@ -9,11 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="icon" href="./assets/images/logo.png">
     <title>CaveLab</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
+    <script src="./assets/js/wow.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
 <div>
@@ -367,62 +370,65 @@
         </div>
         <article class="teaches_block">
             <h2 class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s">Դասավանդող անձնակազմը</h2>
-            <div class="teachers">
-                <div class="teacher wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1s">
-                    <img src="./assets/images/teacher1.jpg" alt="image">
-                    <div class="about_teacher">
-                        <div class="teacher_name">Մարատ Չոբանյան</div>
-                        <div class="teacher_role">Ինժեներ</div>
-                        <div class="teacher_socs">
-                            <svg class="">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                            <svg class="linkedin_icon">
-                                <use xlink:href="#linkedin"></use>
-                            </svg>
-                        </div>
-                        <div class="teacher_text">
-                            In the second stage, there will be narrow professional education, during which the students
-                        </div>
-                    </div>
-                </div>
-                <div class="teacher wow fadeInUp"  data-wow-duration="2s" data-wow-delay="2s">
-                    <img src="./assets/images/teacher2.jpg" alt="image">
-                    <div class="about_teacher">
-                        <div class="teacher_name">Ակակիյ Ակակիեվիչ</div>
-                        <div class="teacher_role">Ինժեներ</div>
-                        <div class="teacher_socs">
-                            <svg class="">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                            <svg class="linkedin_icon">
-                                <use xlink:href="#linkedin"></use>
-                            </svg>
-                        </div>
-                        <div class="teacher_text">
-                            In the second stage, there will be narrow professional education, during which the students
+            <div class="swiper2">
+                <div class="teachers swiper-wrapper">
+                    <div class="teacher wow fadeInUp swiper-slide"  data-wow-duration="2s" data-wow-delay="1s">
+                        <img src="./assets/images/teacher1.jpg" alt="image">
+                        <div class="about_teacher">
+                            <div class="teacher_name">Մարատ Չոբանյան</div>
+                            <div class="teacher_role">Ինժեներ</div>
+                            <div class="teacher_socs">
+                                <svg class="">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                                <svg class="linkedin_icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </div>
+                            <div class="teacher_text">
+                                In the second stage, there will be narrow professional education, during which the students
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="teacher wow fadeInUp"  data-wow-duration="2s" data-wow-delay="3s">
-                    <img src="./assets/images/teacher3.jpg" alt="image">
-                    <div class="about_teacher">
-                        <div class="teacher_name">Մառլեն Չալիկյան</div>
-                        <div class="teacher_role">Ինժեներ</div>
-                        <div class="teacher_socs">
-                            <svg class="">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                            <svg class="linkedin_icon">
-                                <use xlink:href="#linkedin"></use>
-                            </svg>
+                    <div class="teacher wow fadeInUp swiper-slide"  data-wow-duration="2s" data-wow-delay="2s">
+                        <img src="./assets/images/teacher2.jpg" alt="image">
+                        <div class="about_teacher">
+                            <div class="teacher_name">Ակակիյ Ակակիեվիչ</div>
+                            <div class="teacher_role">Ինժեներ</div>
+                            <div class="teacher_socs">
+                                <svg class="">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                                <svg class="linkedin_icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </div>
+                            <div class="teacher_text">
+                                In the second stage, there will be narrow professional education, during which the students
+                            </div>
                         </div>
-                        <div class="teacher_text">
-                            In the second stage, there will be narrow professional education, during which the students
+                    </div>
+                    <div class="teacher wow fadeInUp swiper-slide"  data-wow-duration="2s" data-wow-delay="3s">
+                        <img src="./assets/images/teacher3.jpg" alt="image">
+                        <div class="about_teacher">
+                            <div class="teacher_name">Մառլեն Չալիկյան</div>
+                            <div class="teacher_role">Ինժեներ</div>
+                            <div class="teacher_socs">
+                                <svg class="">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                                <svg class="linkedin_icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </div>
+                            <div class="teacher_text">
+                                In the second stage, there will be narrow professional education, during which the students
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </article>
     </section>
     <div class="scroller" data-speed="fast">
@@ -583,7 +589,7 @@
         </div>
         <div class="copy_right_row container wow fadeInUp"  data-wow-duration="2s" data-wow-delay="2s">
             <div class="info_column">
-                <p>legal information</p>
+                <p class="legal1">legal information</p>
                 <p>&copy; CaveLab, 2024</p>
             </div>
             <div class="cookies_column">
@@ -599,11 +605,11 @@
                     </li>
                 </ul>
             </div>
+            <p class="legal2">legal information</p>
+
         </div>
     </div>
 </footer>
-<script src="./assets/js/wow.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./assets/js/script.js"></script>
+
 </body>
 </html>
