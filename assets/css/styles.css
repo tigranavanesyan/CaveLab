@@ -618,18 +618,23 @@ header{
 }
 .row-2{
     height: 330px;
+    border: 1px solid red;
+}
+.row-2 img{
+    object-position: top right;
+    border-radius: 20px;
 }
 .join_us{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap:  clamp(15px,calc(15px + (35 - 15) * ((100vw - 768px) / (1320 - 768))),35px);
     padding-top: 15px;
     background-image: url("../images/bg.jpg");
     background-size: cover;
     border-radius: 20px;
-    height: 260px;
+    height: clamp(150px,calc(150px + (260 - 150) * ((100vw - 768px) / (1320 - 320))),260px);
     margin-top: clamp(20px,calc(20px + (67 - 20) * ((100vw - 768px) / (1320 - 768))),67px);
 }
 .join_us h3{
@@ -683,7 +688,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*gap: 10px;*/
     margin-top: clamp(30px,calc(30px + (50 - 30) * ((100vw - 768px) / (1320 - 768))),50px);
 }
 .teacher{
@@ -700,7 +704,6 @@ header{
     background-color: var(--orange);
     padding: 20px;
     border-radius: 20px;
-
 }
 
 .teacher_name{
@@ -747,8 +750,6 @@ svg.linkedin_icon{
     gap: 10px;
     padding-bottom: clamp(30px,calc(30px + (50 - 30) * ((100vw - 768px) / (1320 - 768))),50px);
     margin-top: clamp(40px,calc(40px + (90 - 40) * ((100vw - 768px) / (1320 - 768))),90px);
-
-
 }
 .conditions h2{
     color: #D25D1E;
@@ -793,7 +794,6 @@ svg.linkedin_icon{
     background-color: var(--brown2);
     border-radius: 20px;
     height: 610px;
-    /*padding: 65px 30px 40px 70px;*/
     padding: clamp(30px,calc(30px + (60 - 30) * ((100vw - 768px) / (1320 - 768))),60px)
     clamp(15px,calc(15px + (45 - 15) * ((100vw - 768px) / (1320 - 768))),45px);
     display: flex;
@@ -1139,9 +1139,17 @@ footer{
 
 
     .languages{
-        margin-right: 49px;
+        margin-right: clamp(20px,calc(20px + (49 - 20) * ((100vw - 320px) / (1024 - 320))),49px);
         margin-left: auto;
         padding-bottom: 0;
+    }
+    .languages li{
+        font-size: clamp(12px,calc(12px + (16 - 12) * ((100vw - 320px) / (1024 - 320))),16px);
+        padding-bottom: 0;
+    }
+    footer{
+        margin-top: clamp(15px,calc(15px + (36 - 15) * ((100vw - 320px) / (1024 - 320))),36px);
+        padding-top:  clamp(25px,calc(25px + (77 - 25) * ((100vw - 320px) / (1024 - 320))),77px);
     }
 
 
@@ -1197,6 +1205,7 @@ footer{
     }
     .educational_program h2{
         font-size: clamp(24px,calc(24px + (48 - 24) * ((100vw - 320px) / (768 - 320))),48px);
+        letter-spacing: 0.2px;
     }
     .img_text>p{
         font-size: clamp(12px,calc(12px + (20 - 12) * ((100vw - 320px) / (768 - 320))),20px);
@@ -1204,12 +1213,15 @@ footer{
     }
     .first_phase>h2{
         font-size: clamp(20px,calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320))),40px);
+        letter-spacing: 0.2px;
     }
     .second_phase h2{
         font-size: clamp(20px,calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320))),40px);
+        letter-spacing: 0.2px;
     }
     .counter_wrapper>div{
         font-size: clamp(42px,calc(42px + (64 - 42) * ((100vw - 320px) / (768 - 320))),64px);
+        letter-spacing: 0.2px;
     }
     .counter_wrapper span{
         font-size: clamp(12px,calc(12px + (20 - 12) * ((100vw - 320px) / (768 - 320))),20px);
@@ -1222,20 +1234,24 @@ footer{
     }
     .join_us h3{
         font-size: clamp(16px,calc(16px + (36 - 16) * ((100vw - 320px) / (768 - 320))),36px);
+        letter-spacing: 0.2px;
     }
     .about_us h2{
         font-size: clamp(24px,calc(24px + (48 - 24) * ((100vw - 320px) / (768 - 320))),48px);
+        letter-spacing: 0.2px;
     }
     .about_us_row>div p{
         font-size: clamp(12px,calc(12px + (20 - 12) * ((100vw - 320px) / (768 - 320))),20px);
     }
     .conditions h2{
         font-size: clamp(24px,calc(24px + (48 - 24) * ((100vw - 320px) / (768 - 320))),48px);
+        letter-spacing: 0.2px;
     }
     .conditions_stage h3{
         padding-top: clamp(15px,calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320))),30px);
         padding-bottom: clamp(15px,calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320))),30px);
         font-size: clamp(18px,calc(18px + (38 - 18) * ((100vw - 320px) / (768 - 320))),38px);
+        letter-spacing: 0.2px;
     }
 
 
@@ -1243,7 +1259,7 @@ footer{
         height: clamp(30px,calc(30px + (50 - 30) * ((100vw - 320px) / (768 - 320))),50px);
     }
     .header_fixed{
-        height: clamp(30px,calc(30px + (50 - 30) * ((100vw - 320px) / (768 - 320))),50px);
+        height: clamp(40px,calc(40px + (50 - 40) * ((100vw - 320px) / (768 - 320))),50px);
     }
     .burger_icon{
         height: clamp(25px,calc(25px + (30 - 25) * ((100vw - 320px) / (768 - 320))),30px);
@@ -1271,6 +1287,9 @@ footer{
     }
     .row-1>div{
         height: 220px;
+    }
+    .row-2{
+        height: clamp(170px,calc(170px + (330 - 170) * ((100vw - 320px) / (768 - 320))),330px);
     }
 
 
