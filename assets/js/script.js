@@ -63,6 +63,7 @@ setTimeout(()=>{
 },1500)
 
 
+
 const scrollers = document.querySelectorAll(".scroller")
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     addAnimation();
@@ -85,6 +86,9 @@ function addAnimation() {
 /*-----------burger start---------------*/
 const burgerIcon = document.querySelector('.burger_icon')
 const menu = document.querySelector('.menu')
+
+const logo = document.querySelector('.logo_wrapper')
+logo.addEventListener('click',()=>closeMenu())
 burgerIcon.addEventListener('click',(e)=>{
     if(!e.currentTarget.classList.contains("active")){
         openMenu()
