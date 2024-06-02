@@ -53,14 +53,7 @@ let slider2 = new Swiper('.swiper2',{
         },
     }
 });
-setTimeout(()=>{
-    const firstScreen = document.querySelector(".first_screen")
-    firstScreen.style.gridTemplateColumns = "3fr 2fr"
-},1000)
-setTimeout(()=>{
-    const discoverBlock = document.querySelector(".discover_block")
-    discoverBlock.style.display = "grid"
-},1500)
+
 
 
 
@@ -150,8 +143,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if(!window.matchMedia("(max-width: 1024px)").matches){
         slider1.activeIndex=0
         slider1.autoplay.stop()
+        setTimeout(()=>{
+            const firstScreen = document.querySelector(".first_screen")
+            firstScreen.style.gridTemplateColumns = "3fr 2fr"
+        },1000)
+        setTimeout(()=>{
+            const discoverBlock = document.querySelector(".discover_block")
+            discoverBlock.style.display = "grid"
+        },1500)
     } else {
         slider1.autoplay.start()
+        
     }
 });
 
@@ -205,15 +207,30 @@ const onresize = function(e) {
 
     if(!window.matchMedia("(max-width: 1024px)").matches && burgerIcon.classList.contains("active")){
         closeMenu()
+
     }
     if(!window.matchMedia("(max-width: 1024px)").matches){
         slider1.activeIndex=0
         slider1.autoplay.stop()
         slider2.activeIndex=0
         slider2.autoplay.stop()
+        setTimeout(()=>{
+            const firstScreen = document.querySelector(".first_screen")
+            firstScreen.style.gridTemplateColumns = "3fr 2fr"
+        },1000)
+        setTimeout(()=>{
+            const discoverBlock = document.querySelector(".discover_block")
+            discoverBlock.style.display = "grid"
+        },1500)
     } else {
         slider1.autoplay.start()
         slider2.autoplay.start()
+
+        const firstScreen = document.querySelector(".first_screen")
+        firstScreen.style.gridTemplateColumns = "1fr"
+
+        const discoverBlock = document.querySelector(".discover_block")
+        discoverBlock.style.display = "none"
     }
 }
 window.addEventListener("resize", onresize);
