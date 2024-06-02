@@ -63,7 +63,6 @@ a{
     margin: 0 auto;
     padding-left: 5px;
     padding-right: 5px;
-    overflow-x: hidden;
 }
 body{
     overflow-x: hidden;
@@ -78,8 +77,8 @@ header{
     height: clamp(50px,calc(50px + (68 - 50) * ((100vw - 768px) / (1320 - 768))),68px);
 }
 .header_fixed{
+    width: 100%;
     top: 0;
-    /* left: 0; */
     max-width: 100vw;
     height: clamp(50px,calc(50px + (68 - 50) * ((100vw - 768px) / (1320 - 768))),68px);
     position: fixed;
@@ -1041,7 +1040,11 @@ footer{
     }
 }
 
-
+@media (max-width: 1320px){
+    .container{
+        overflow-x: hidden;
+    }
+}
 @media (max-width: 1024px) {
     .duration{
         font-weight: 600;
@@ -1049,7 +1052,6 @@ footer{
     .discover_block{
         display: none;
     }
-
 
     .contact_row{
         display: flex;

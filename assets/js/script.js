@@ -240,7 +240,9 @@ stages.addEventListener('mouseenter',()=>{
     slider1.autoplay.stop()
 })
 stages.addEventListener('mouseleave',()=>{
-    slider1.autoplay.start()
+    if(window.matchMedia("(max-width: 1024px)").matches){
+        slider1.autoplay.start()
+    }
 })
 
 let teachers = document.querySelector('.swiper2')
@@ -248,5 +250,7 @@ teachers.addEventListener('mouseenter',()=>{
     slider2.autoplay.stop()
 })
 teachers.addEventListener('mouseleave',()=>{
-    slider2.autoplay.start()
+    if(window.matchMedia("(max-width: 1024px)").matches){
+        slider2.autoplay.start()
+    }
 })
