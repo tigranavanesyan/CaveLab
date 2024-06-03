@@ -559,7 +559,7 @@ header{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
-    height: 310px;
+    min-height: 310px;
     margin-top: 20px;
 }
 .row-1>div{
@@ -603,7 +603,6 @@ header{
 .counterForFixingWidth{
     display: inline-block;
     position: relative;
-    /*padding-right: 50px30;*/
     padding-right: clamp(30px,calc(30px + (50 - 30) * ((100vw - 768px) / (1320 - 768))),50px);
     color: transparent;
 }
@@ -672,7 +671,7 @@ header{
 .about_us_row{
     display: flex;
     gap: 10px;
-    height: 520px;
+    min-height: 520px;
     margin-top: 40px;
 
 }
@@ -680,18 +679,22 @@ header{
     display: flex;
     flex-direction: column-reverse;
     border: 1px solid var(--black);
-    padding: 20px;
+    padding: clamp(10px,calc(10px + (20 - 10) * ((100vw - 1024px) / (1320 - 1024))),20px);
 }
 .about_us_row>div p{
     font-family: "Montserrat_arm";
     font-size: clamp(20px,calc(20px + (24 - 20) * ((100vw - 768px) / (1320 - 768))),24px);
     font-weight: 400;
-    max-width: 520px;
+    max-width: 100%;
 }
 .about_us_row>*{
     border-radius: 20px;
     flex-basis: 50%;
 }
+.about_us_row img{
+
+}
+
 .teaches_block{
     margin-top: clamp(30px,calc(30px + (80 - 30) * ((100vw - 768px) / (1320 - 768))),80px);
     margin-bottom: clamp(30px,calc(30px + (85 - 30) * ((100vw - 768px) / (1320 - 768))),85px);
@@ -796,8 +799,8 @@ svg.linkedin_icon{
     background-color: var(--brown2);
     border-radius: 20px;
     height: 610px;
-    padding: clamp(30px,calc(30px + (50 - 30) * ((100vw - 768px) / (1320 - 768))),50px)
-    clamp(15px,calc(15px + (35 - 15) * ((100vw - 768px) / (1320 - 768))),35px);
+    padding: clamp(20px,calc(20px + (50 - 20) * ((100vw - 768px) / (1320 - 768))),50px)
+    clamp(5px,calc(5px + (35 - 5) * ((100vw - 768px) / (1320 - 768))),35px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -836,13 +839,13 @@ svg.linkedin_icon{
 }
 .icon-text1 span{
     color: var(--white);
-    font-family: Montserrat;
+    font-family: Montserrat_arm;
     font-size: 26px;
     font-weight: 500;
 }
 .icon-text2 span{
     color: var(--white);
-    font-family: Montserrat;
+    font-family: Montserrat_arm;
     font-size: 26px;
     font-weight: 500;
     max-width: 80%;
@@ -1050,8 +1053,13 @@ footer{
     }
 }
 @media (max-width: 1024px) {
+    .about_us_row img{
+        max-height: 350px;
+    }
     .duration{
         font-weight: 600;
+        padding-left: 10px;
+        padding-bottom: 5px;
     }
     .discover_block{
         display: none;
@@ -1144,6 +1152,21 @@ footer{
     }
     .text_block{
         padding-right: 0;
+    }
+    .conditions_lists .list{
+        gap: clamp(10px,calc(10px + (30 - 10) * ((100vw - 320px) / (1024 - 320))),30px);
+    }
+    .icon-text1 span{
+        font-size: clamp(20px,calc(20px + (24 - 20) * ((100vw - 320px) / (1024 - 320))),24px);
+
+    }
+    .icon-text2 span{
+        font-size: clamp(20px,calc(20px + (24 - 20) * ((100vw - 320px) / (1024 - 320))),24px);
+
+    }
+    .icon-text2{
+        gap: clamp(5px,calc(5px + (25 - 5) * ((100vw - 320px) / (1024 - 320))),25px);
+
     }
 
 
@@ -1265,8 +1288,46 @@ footer{
         font-size: clamp(18px,calc(18px + (38 - 18) * ((100vw - 320px) / (768 - 320))),38px);
         letter-spacing: 0.2px;
     }
+    .icon-text1 span{
+        font-size: clamp(14px,calc(14px + (26 - 14) * ((100vw - 320px) / (768 - 320))),26px);
+    }
     .price2{
-        font-size: 28px;
+        font-size: clamp(14px,calc(14px + (28 - 14) * ((100vw - 320px) / (768 - 320))),28px);
+        padding: clamp(10px,calc(10px + (30 - 10) * ((100vw - 320px) / (768 - 320))),30px);
+        height: clamp(100px,calc(100px + (160 - 100) * ((100vw - 320px) / (768 - 320))),160px);
+
+    }
+    .price{
+        padding: clamp(15px,calc(15px + (40 - 15) * ((100vw - 320px) / (768 - 320))),40px);
+        width: 100%;
+    }
+    .price div{
+        font-size: clamp(24px,calc(24px + (52 - 24) * ((100vw - 320px) / (768 - 320))),52px);
+        padding-left: 30%;
+
+    }
+    .price p{
+        padding-left: 30%;
+
+    }
+    .icon-text2 span{
+        font-size: clamp(12px,calc(12px + (26 - 12) * ((100vw - 320px) / (768 - 320))),26px);
+        font-weight: 400;
+
+    }
+    .conditions_lists{
+        height: clamp(400px,calc(400px + (600 - 400) * ((100vw - 320px) / (768 - 320))),600px);
+
+    }
+    .conditions_lists .list{
+        gap: clamp(10px,calc(10px + (30 - 10) * ((100vw - 320px) / (768 - 320))),30px);
+    }
+    .children_icon{
+        width: clamp(20px,calc(20px + (45 - 20) * ((100vw - 320px) / (768 - 320))),45px);
+        height: clamp(20px,calc(20px + (45 - 20) * ((100vw - 320px) / (768 - 320))),45px);
+    }
+    .counter_row{
+        gap: clamp(5px,calc(5px + (25 - 5) * ((100vw - 320px) / (768 - 320))),25px);
     }
 
 
@@ -1278,6 +1339,10 @@ footer{
     }
     .burger_icon{
         height: clamp(25px,calc(25px + (30 - 25) * ((100vw - 320px) / (768 - 320))),30px);
+    }
+    .icon-text2{
+        gap: clamp(5px,calc(5px + (25 - 5) * ((100vw - 320px) / (768 - 320))),25px);
+
     }
 
 
