@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
 </head>
-<body>
+<body class="">
 <div>
     <svg  style="display: none;">
         <symbol id="lightning" xmlns="http://www.w3.org/2000/svg" width="29" height="46" viewBox="0 0 29 46" fill="none">
@@ -84,16 +84,16 @@
             </a>
             <nav>
                 <ul class="menu  hide_menu">
-                    <li><a href="#program">Կրթական ծրագիր</a></li>
-                    <li><a href="#about">Մեր մասին</a></li>
-                    <li><a href="#conditions">Պայմաններ</a></li>
-                    <li><a href="#contacts">Կոնտակտ</a></li>
+                    <li><a  data-lang="menu_item-1" href="#program">Կրթական ծրագիր</a></li>
+                    <li><a  data-lang="menu_item-2" href="#about">Մեր մասին</a></li>
+                    <li><a data-lang="menu_item-3" href="#conditions">Պայմաններ</a></li>
+                    <li><a data-lang="menu_item-4" href="#contacts">Կոնտակտ</a></li>
                 </ul>
             </nav>
             <ul class="languages">
-                <li><a href="#">Eng</a></li>
-                <li><a href="#">Ру</a></li>
-                <li class="arm"><a href="#">Հայ</a></li>
+                <li><a data-btn="eng" href="#"  onclick="event.preventDefault();">Eng</a></li>
+                <li><a data-btn="ru" href="#" onclick="event.preventDefault();">Ру</a></li>
+                <li class="arm"><a data-btn="arm" href="#" onclick="event.preventDefault();">Հայ</a></li>
             </ul>
             <div class="burger_icon">
                 <span></span>
@@ -135,14 +135,14 @@
     </section>
     <div class="scroller" data-speed="fast">
         <ul class="tag-list scroller__inner">
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Տեխնիկական հմտություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Ստեղծարարություն և նորարարություն </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Մասնագիտական կապեր և փոխազդեցություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Տեխնիկական հմտություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Ստեղծարարություն և նորարարություն </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Մասնագիտական կապեր և փոխազդեցություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Տեխնիկական հմտություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Ստեղծարարություն և նորարարություն </li>
         </ul>
     </div>
     <div  id="program" class=" nav_section">
@@ -151,7 +151,10 @@
             <div class="img_text">
                 <img class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/3.jpg" alt="image">
                 <p class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" >
-                    Cavelab-ի կրթական  ծրագիրը համալիր կրթական միջոցառումների շարք է և կազմված է 2 փուլից: Փուլերից յուրաքանչյուրը կոնկրետ խնդիր է լուծում, որի արդյունքում որպես «պրոդուկտ» ունենում ենք բավարար աշխատանքային փորձ ունեցող, օտար լեզու իմացող և զարգացած արտահանող երիտասարդ։
+                    CaveLaby կրթական ծրագրից աշակերտները կստանան հիմնավոր տեխնիկական հմտություններ, ներառյալ ռոբոտաշինություն, 3D տպագրություն, մեխանիկական սարքավորումների օգտագործում, զոդում և միկրոկոնտրոլերների ծրագրավորում։
+                    <br/>
+                    <br/>
+                    Նրանք հնարավորություն կունենան մասնագիտանալ իրենց նախընտրած ոլորտում, իրականացնել բարդ ինժեներական նախագծեր և զարգացնել ստեղծարար մտածողություն։ Ծրագիրը կզարգացնի նրանց ինքնավստահությունը, թիմային աշխատանքի հմտությունները և կապեր հաստատելու հնարավորությունները ինժեներական ոլորտում։
                 </p>
             </div>
         </section>
@@ -159,7 +162,11 @@
             <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">Առաջին փուլ</h2>
             <div class="img_text">
                 <p class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">
-                    Առաջին փուլում, ուսանողները նախնական գիտելիքներ են ստանում ինժեներիայից, ուսումնասիրելով ամենա պարզագույն ծրագրերը:
+                    Առաջին փուլում աշակերտները կծանոթանան ինժեներական տարբեր ոլորտներին և ձեռք կբերեն հիմանական տեխնիկական հմտություններ։
+                    <br/>
+                    <br/>
+                    Դասընթացները կներառեն գործնական պարապմունքներ, որոնք կօգնեն նրանց հասկանալ և կիրառել ինժեներական սկզբունքները։
+                    Այս փուլը նպատակ ունի աշակերտներին տրամադրել անհրաժեշտ գիտելիքներ և փորձ՝ երկրորդ փուլում բարդ նախագծեր իրականացնելու համար։
                 </p>
                 <img class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s" src="assets/images/4.jpg" alt="image">
             </div>
@@ -178,13 +185,19 @@
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsumLorem upsumLorem</span>
+                                        <span>Ալգորիթմական մտածողության զարգացում</span>
                                     </li>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Սենսորների և շարժիչների ինտեգրում</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Ռոբոտների կառուցում և ծրագրավորում</span>
                                     </li>
                                 </ul>
                             </div>
@@ -198,20 +211,26 @@
                         <div class="stage_text_button">
                             <div>
                                 <button class="btn btn-secondary">
-                                    CNC
+                                    Հաստոցների հետ աշխատանք
                                 </button>
                                 <ul>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Սովորել, ինչպես աշխատել հաստոցների հետ</span>
                                     </li>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Անվտանգության կանոնների պահպանում</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Սովորել, ինչպես աշխատել հաստոցների հետ</span>
                                     </li>
                                 </ul>
                             </div>
@@ -221,24 +240,30 @@
                         </div>
                     </div>
                     <div class="stage wow fadeInRight swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
-                        <img src="./assets/images/icons/scratch-3.png" alt="image">
+                        <img src="./assets/images/icons/arduino-3.png" alt="image">
                         <div class="stage_text_button">
                             <div>
                                 <button class="btn btn-secondary">
-                                    Scratch
+                                    Arduino
                                 </button>
                                 <ul>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Հիմնական ծրագրավորման հմտություններ</span>
                                     </li>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Սենսորների և ակտիվատորների ինտեգրում</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Միկրոկոնտրոլերների հետ աշխատելու սկզբունքներ</span>
                                     </li>
                                 </ul>
                             </div>
@@ -252,20 +277,14 @@
                         <div class="stage_text_button">
                             <div>
                                 <button class="btn btn-secondary">
-                                    3d modeling
+                                    Եռաչափ մոդելավորում
                                 </button>
                                 <ul>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
-                                    </li>
-                                    <li class="icon-text">
-                                        <svg class="lightning-small">
-                                            <use xlink:href="#lightning-small"></use>
-                                        </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>3D մոդելավորման ծրագրերի օգտագործում</span>
                                     </li>
                                 </ul>
                             </div>
@@ -275,24 +294,30 @@
                         </div>
                     </div>
                     <div class="stage wow fadeInRight swiper-slide"  data-wow-duration="2s" data-wow-delay="1s" >
-                        <img src="./assets/images/icons/arduino-5.png" alt="image">
+                        <img src="./assets/images/icons/cnc-2.png" alt="image">
                         <div class="stage_text_button">
                             <div>
                                 <button class="btn btn-secondary">
-                                    Electronics
+                                    Զոդման հմտություններ
                                 </button>
                                 <ul>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Զոդման որակի ստուգում և շտկում</span>
                                     </li>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Էլեկտրոնային բաղադրիչների միացում</span>
+                                    </li>
+                                    <li class="icon-text">
+                                        <svg class="lightning-small">
+                                            <use xlink:href="#lightning-small"></use>
+                                        </svg>
+                                        <span>Զոդման հիմնական տեխնիկաներ և գործիքներ</span>
                                     </li>
                                 </ul>
                             </div>
@@ -306,20 +331,20 @@
                         <div class="stage_text_button">
                             <div>
                                 <button class="btn btn-secondary">
-                                    3d printing
+                                    Եռաչափ տպագրություն
                                 </button>
                                 <ul>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>3D մոդելների տպագրության տեխնիկաներ</span>
                                     </li>
                                     <li class="icon-text">
                                         <svg class="lightning-small">
                                             <use xlink:href="#lightning-small"></use>
                                         </svg>
-                                        <span>Lorem upsum</span>
+                                        <span>Տպագրական նյութերի և տեխնոլոգիաների ընտրություն</span>
                                     </li>
                                 </ul>
                             </div>
@@ -345,13 +370,13 @@
                             <span>ոլորտ</span>
                         </div>
                         <div class="counter_next_text ">
-                            Երկրորդ փուլում, ստանում են մասնագիտական ու ժամանակին ակտուալ գիտելիք
+                            Երկրորդ փուլում աշակերտները կզբաղվեն նախագծային ուսուցմամբ, իրականացնելով բարդ ինժեներական նախագծեր։
                         </div>
                     </div>
                 </div>
                 <div class="text_block wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s">
                     <p>
-                        Երկրորդ փուլի արդյունքում կունենանք փայլուն ինժեներներ, որոնք կկարողանան, ոչ մի այն էս անել , այլ էն մյուսն էլ անել
+                        Աշակերտները կկարողանան կիրառել իրենց գիտելիքները նորարար նախագծերի իրականացմամբ՝ լուծելով տարբեր ոլորտների տեխնիկական խնդիրներ։ Բացի այդ, իրենց հմտությունները կօգնեն արագ ինտեգրվել աշխատաշուկայում և կատարելագործվել իրենց մասնագիտության մեջ։
                     </p>
                 </div>
             </div>
@@ -375,7 +400,7 @@
             <img  class="text_block wow fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s" src="assets/images/6.jpg" alt="image">
             <div  class="text_block wow fadeInRight"  data-wow-duration="2s" data-wow-delay="1s">
                 <P>
-                    CaveLab- ը հիմնադրվել է Մունք տեխնոդպրոցի շրջանավարտների և ոլորտի մասնագետ Հարությունի կողմից: CaveLab-ի նպատակն է
+                    CaveLab-ը ինժեներական կրթական լաբորատորիա է, որը նպատակ ունի զարգացնել և կատարելագործել երեխաների տեխնիկական հմտությունները՝ նրանց ծանոթացնելով ինժեներական տարբեր ոլորտներին։ Մեր առաքելությունն է նպաստել նորարար և գիտելիքահեն հասարակության ձևավորմանը՝ ապահովելով որակյալ կրթություն և պրակտիկ փորձ։ Մենք ձգտում ենք պատրաստել բարձրակարգ մասնագետներ, ովքեր կկարողանան ներդրում ունենալ Հայաստանի տնտեսության և արտադրության զարգացման գործում։
                 </P>
             </div>
         </div>
@@ -384,10 +409,10 @@
             <div class="swiper2 swiper">
                 <div class="teachers swiper-wrapper">
                     <div class="teacher wow fadeInUp swiper-slide"  data-wow-duration="2s" data-wow-delay="1s">
-                        <img src="./assets/images/teacher1.jpg" alt="image">
+                        <img src="./assets/images/teacher11.jpeg" alt="image">
                         <div class="about_teacher">
-                            <div class="teacher_name">Մարատ Չոբանյան</div>
-                            <div class="teacher_role">Ինժեներ</div>
+                            <div class="teacher_name">Ռիմա Ավանեսյան</div>
+                            <div class="teacher_role">Խմբակավար</div>
                             <div class="teacher_socs">
                                 <svg class="">
                                     <use xlink:href="#facebook"></use>
@@ -395,17 +420,14 @@
                                 <svg class="linkedin_icon">
                                     <use xlink:href="#linkedin"></use>
                                 </svg>
-                            </div>
-                            <div class="teacher_text">
-                                In the second stage, there will be narrow professional education, during which the students
                             </div>
                         </div>
                     </div>
                     <div class="teacher wow fadeInUp swiper-slide"  data-wow-duration="2s" data-wow-delay="2s">
-                        <img src="./assets/images/teacher2.jpg" alt="image">
+                        <img src="./assets/images/teacher12.jpeg" alt="image">
                         <div class="about_teacher">
-                            <div class="teacher_name">Ակակիյ Ակակիեվիչ</div>
-                            <div class="teacher_role">Ինժեներ</div>
+                            <div class="teacher_name">Հարություն Դարախչյան</div>
+                            <div class="teacher_role">Գլխավոր ինժեներ</div>
                             <div class="teacher_socs">
                                 <svg class="">
                                     <use xlink:href="#facebook"></use>
@@ -413,17 +435,14 @@
                                 <svg class="linkedin_icon">
                                     <use xlink:href="#linkedin"></use>
                                 </svg>
-                            </div>
-                            <div class="teacher_text">
-                                In the second stage, there will be narrow professional education, during which the students
                             </div>
                         </div>
                     </div>
                     <div class="teacher wow fadeInUp swiper-slide"  data-wow-duration="2s" data-wow-delay="3s">
-                        <img src="./assets/images/teacher3.jpg" alt="image">
+                        <img src="./assets/images/teacher13.jpeg" alt="image">
                         <div class="about_teacher">
-                            <div class="teacher_name">Մառլեն Չալիկյան</div>
-                            <div class="teacher_role">Ինժեներ</div>
+                            <div class="teacher_name">Մովսես Հովսեփյան</div>
+                            <div class="teacher_role">Խմբակավար</div>
                             <div class="teacher_socs">
                                 <svg class="">
                                     <use xlink:href="#facebook"></use>
@@ -431,9 +450,6 @@
                                 <svg class="linkedin_icon">
                                     <use xlink:href="#linkedin"></use>
                                 </svg>
-                            </div>
-                            <div class="teacher_text">
-                                In the second stage, there will be narrow professional education, during which the students
                             </div>
                         </div>
                     </div>
@@ -444,14 +460,14 @@
     </section>
     <div class="scroller" data-speed="fast">
         <ul class="tag-list scroller__inner">
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
-            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> 12-18 տարեկան երեխաների համար </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Տեխնիկական հմտություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Ստեղծարարություն և նորարարություն </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Մասնագիտական կապեր և փոխազդեցություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Տեխնիկական հմտություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Ստեղծարարություն և նորարարություն </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Մասնագիտական կապեր և փոխազդեցություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Տեխնիկական հմտություններ </li>
+            <li class="animated_text_icon"><svg><use xlink:href="#lightning_sm"></use></svg> Ստեղծարարություն և նորարարություն </li>
         </ul>
     </div>
     <section id="conditions" class="conditions container nav_section">
@@ -467,25 +483,37 @@
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Տեխնիկական հիմունքներ</span>
                         </li>
                         <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Գործնական հմտություններ</span>
                         </li>
                         <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Ստեղծարարություն</span>
                         </li>
                         <li class="icon-text1">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Թիմային աշխատանք</span>
+                        </li>
+                        <li class="icon-text1">
+                            <svg class="lightning-mid">
+                                <use xlink:href="#lightning-small"></use>
+                            </svg>
+                            <span>Նախնական մասնագիտացում</span>
+                        </li>
+                        <li class="icon-text1">
+                            <svg class="lightning-mid">
+                                <use xlink:href="#lightning-small"></use>
+                            </svg>
+                            <span>Անվտանգության կանոններ</span>
                         </li>
                     </ul>
                     <ul class="list2">
@@ -493,13 +521,13 @@
                             <svg class="children_icon">
                                 <use xlink:href="#children"></use>
                             </svg>
-                            <span>15 hogi xmbum</span>
+                            <span>10-15 հոգի խմբում</span>
                         </li>
                         <li class="icon-text2">
                             <svg class="children_icon">
                                 <use xlink:href="#lessons"></use>
                             </svg>
-                            <span>10 das amsum</span>
+                            <span>8-10 դաս՝ տևողությունը 1.5-2 ժամ։</span>
                         </li>
                     </ul>
 
@@ -517,31 +545,43 @@
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Խորացված մասնագիտական գիտելիքներ</span>
                         </li>
                         <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Նորարարություն</span>
                         </li>
                         <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Նախագծային աշխատանքներ</span>
                         </li>
                         <li class="icon-text2">
                             <svg class="lightning-mid">
                                 <use xlink:href="#lightning-small"></use>
                             </svg>
-                            <span>keterav hinchn stnan</span>
+                            <span>Պրակտիկ փորձ</span>
+                        </li>
+                        <li class="icon-text2">
+                            <svg class="lightning-mid">
+                                <use xlink:href="#lightning-small"></use>
+                            </svg>
+                            <span>Թիմային աշխատանք</span>
+                        </li>
+                        <li class="icon-text2">
+                            <svg class="lightning-mid">
+                                <use xlink:href="#lightning-small"></use>
+                            </svg>
+                            <span>Մասնագիտական կապեր</span>
                         </li>
                     </ul>
 
                 </div>
                 <div class="price2">
-                    <p>Միայն առաջին փուլը հաղթահարելու դեպքում</p>
+                    <p>Երկրորդ փուլին մասնակցելու համար աշակերտները պետք է հաջողությամբ ավարտեն առաջին փուլը</p>
                 </div>
             </div>
         </div>
@@ -564,7 +604,7 @@
                     +374 (97) 26-05-22
                 </a>
                 <p>
-                    Questions regarding purchase, payment and course content
+                    Դասընթացի վճարման և բովանդակության հետ կապված հարցեր
                 </p>
             </div>
             <div class="email_column">

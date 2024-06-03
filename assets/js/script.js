@@ -107,9 +107,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let counter1 = document.getElementById("counter")
     let count1 = 0
-    let target1 = 85
+    let target1 = 10
     let increment1 = 1
-    let interval1 = 80
+    let interval1 = 180
     counterForFixingWidth.innerHTML=target1
 
     function updateCounter() {
@@ -254,3 +254,92 @@ teachers.addEventListener('mouseleave',()=>{
         slider2.autoplay.start()
     }
 })
+
+/*---------------------lang start--------------------*/
+const langButtons = document.querySelectorAll("[data-btn]");
+const allLangs = ["eng", "ru", "arm"];
+let currentLang = localStorage.getItem("language") || "arm";
+
+const currentTexts = {
+    "menu_item-1": {
+        eng: "Educational Program",
+        ru: "Образовательная программа",
+        arm: "Կրթական ծրագիր",
+    },
+    "menu_item-2": {
+        eng: "about us",
+        ru: "О нас",
+        arm: "Մեր մասին",
+    },
+    "menu_item-3": {
+        eng: "Conditions",
+        ru: "Условия",
+        arm: "Պայմաններ",
+    },
+    "menu_item-4": {
+        eng: "Contact",
+        ru: "Контакт",
+        arm: "Կոնտակտ",
+    },
+};
+
+
+function changeLang() {
+    for (const key in currentTexts) {
+        let elem = document.querySelector(`[data-lang=${key}]`);
+        if (elem) {
+            elem.textContent = currentTexts[key][currentLang];
+        }
+    }
+}
+changeLang();
+
+
+langButtons.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        if (!event.target.classList.contains("header__btn_active")) {
+            currentLang = event.target.dataset.btn;
+            localStorage.setItem("language", event.target.dataset.btn);
+            resetActiveClass(langButtons, "header__btn_active");
+            btn.classList.add("header__btn_active");
+            changeLang();
+        }
+    });
+});
+
+// Сброс активного класса у переданного массива элементов
+function resetActiveClass(arr, activeClass) {
+    arr.forEach((elem) => {
+        elem.classList.remove(activeClass);
+    });
+}
+
+// Проверка активной кнопки
+function checkActiveLangButton() {
+    switch (currentLang) {
+        case "eng":
+            document
+                .querySelector('[data-btn="eng"]')
+                .classList.add("header__btn_active");
+            break;
+        case "ru":
+            document
+                .querySelector('[data-btn="ru"]')
+                .classList.add("header__btn_active");
+            break;
+        case "arm":
+            document
+                .querySelector('[data-btn="arm"]')
+                .classList.add("header__btn_active");
+            break;
+
+        default:
+            document
+                .querySelector('[data-btn="arm"]')
+                .classList.add("header__btn_active");
+            break;
+    }
+}
+checkActiveLangButton();
+
+/*---------------------lang end--------------------*/
