@@ -177,12 +177,16 @@ window.addEventListener("scroll", () => {
     let scrollTop = window.scrollY;
 
     // Handle fixed header appearance
-    if (scrollTop > lastScrollTop) {
-        fixedHeader.style.top = "-85px"
-    } else {
-        fixedHeader.style.top = "0px"
+
+    if(!burgerIcon.classList.contains("active")){
+        if (scrollTop > lastScrollTop) {
+            fixedHeader.style.top = "-85px"
+        } else {
+            fixedHeader.style.top = "0px"
+        }
+        lastScrollTop = scrollTop
     }
-    lastScrollTop = scrollTop
+
 
     // Handle active link highlighting
     navSections.forEach(sec => {
@@ -259,6 +263,8 @@ teachers.addEventListener('mouseleave',()=>{
 const langButtons = document.querySelectorAll("[data-btn]");
 const allLangs = ["eng", "ru", "arm"];
 let currentLang = localStorage.getItem("language") || "arm";
+const body = document.querySelector('body')
+
 
 const currentTexts = {
     "menu_item-1": {
@@ -291,8 +297,16 @@ function changeLang() {
             elem.textContent = currentTexts[key][currentLang];
         }
     }
+    body.classList.remove('arm')
+    body.classList.remove('ru')
+    body.classList.remove('eng')
+    body.classList.add(`${currentLang}`)
+
+    console.log(`language changed to ${currentLang}`)
 }
-changeLang();
+if(currentLang === 'ru' || currentLang === 'eng'){
+    changeLang();
+}
 
 
 langButtons.forEach((btn) => {
@@ -308,14 +322,18 @@ langButtons.forEach((btn) => {
 });
 
 // Сброс активного класса у переданного массива элементов
+
 function resetActiveClass(arr, activeClass) {
     arr.forEach((elem) => {
         elem.classList.remove(activeClass);
     });
+
+
 }
 
 // Проверка активной кнопки
 function checkActiveLangButton() {
+
     switch (currentLang) {
         case "eng":
             document
@@ -326,11 +344,13 @@ function checkActiveLangButton() {
             document
                 .querySelector('[data-btn="ru"]')
                 .classList.add("header__btn_active");
+
             break;
         case "arm":
             document
                 .querySelector('[data-btn="arm"]')
                 .classList.add("header__btn_active");
+
             break;
 
         default:
