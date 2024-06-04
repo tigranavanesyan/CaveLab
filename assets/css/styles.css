@@ -669,14 +669,15 @@ header{
     letter-spacing: -3.8px;
 }
 .about_us_row{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
+    height: 100%;
     min-height: 520px;
     margin-top: 40px;
-
+    flex-shrink: 1;
 }
 .about_us_row>div{
-    display: flex;
     flex-direction: column-reverse;
     border: 1px solid var(--black);
     padding: clamp(10px,calc(10px + (20 - 10) * ((100vw - 1024px) / (1320 - 1024))),20px);
@@ -689,10 +690,11 @@ header{
 }
 .about_us_row>*{
     border-radius: 20px;
-    flex-basis: 50%;
 }
 .about_us_row img{
-
+    height: 520px;
+    object-fit: cover;
+    object-position: top right;
 }
 
 .teaches_block{
@@ -710,6 +712,7 @@ header{
     flex-direction: column;
     gap: 10px;
 
+
 }
 .about_teacher{
     display: flex;
@@ -726,6 +729,8 @@ header{
     font-family: "Montserrat_arm";
     font-size: 27px;
     font-weight: 700;
+    height: 60px;
+    text-align: center;
 }
 .teacher_role{
     color: #F3F3F3;
@@ -1049,11 +1054,12 @@ footer{
 
 @media (max-width: 1320px){
     .container{
-        overflow-x: hidden;
+        overflow: hidden;
     }
 }
 @media (max-width: 1024px) {
     .about_us_row img{
+
         max-height: 350px;
     }
     .duration{
@@ -1147,6 +1153,7 @@ footer{
         cursor: grabbing;
     }
     .about_us_row{
+        display: flex;
         flex-direction: column;
         height: auto;
     }
