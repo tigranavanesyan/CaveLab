@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if(!window.matchMedia("(max-width: 1024px)").matches){
         slider1.activeIndex=0
         slider1.autoplay.stop()
+        slider1.disable()
         setTimeout(()=>{
             const firstScreen = document.querySelector(".first_screen")
             firstScreen.style.gridTemplateColumns = "3fr 2fr"
@@ -153,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },1500)
     } else {
         slider1.autoplay.start()
+        slider1.enable()
         
     }
 });
@@ -216,6 +218,7 @@ const onresize = function(e) {
     if(!window.matchMedia("(max-width: 1024px)").matches){
         slider1.activeIndex=0
         slider1.autoplay.stop()
+        slider1.disable()
         slider2.activeIndex=0
         slider2.autoplay.stop()
         setTimeout(()=>{
@@ -228,6 +231,7 @@ const onresize = function(e) {
         },1500)
     } else {
         slider1.autoplay.start()
+        slider1.enable()
         slider2.autoplay.start()
 
         const firstScreen = document.querySelector(".first_screen")
