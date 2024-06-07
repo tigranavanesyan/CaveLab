@@ -669,6 +669,11 @@ const currentTexts = {
         ru: "Зарегистрироваться",
         arm: "Գրանցվել",
     },
+    "t76-2": {
+        eng: "Register",
+        ru: "Зарегистрироваться",
+        arm: "Գրանցվել",
+    },
     "t77": {
         eng: "Questions regarding purchase, payment and course content",
         ru: "Вопросы, связанные с оплатой и содержанием курса",
