@@ -3,7 +3,7 @@ let slider1 = new Swiper('.swiper1',{
     slidesPerView: 1,
     spaceBetween: 5,
     autoplay: {
-        delay: 2000,
+        delay: 3000,
         stopOnLastSlide: false,
         disableOnInteraction: false
     },
@@ -30,7 +30,7 @@ let slider2 = new Swiper('.swiper2',{
     slidesPerView: 1,
     spaceBetween: 5,
     autoplay: {
-        delay: 2000,
+        delay: 3000,
         stopOnLastSlide: false,
         disableOnInteraction: false
     },
@@ -678,6 +678,36 @@ const currentTexts = {
         eng: "Questions regarding purchase, payment and course content",
         ru: "Вопросы, связанные с оплатой и содержанием курса",
         arm: "Դասընթացի վճարման և բովանդակության հետ կապված հարցեր",
+    },
+    "t78": {
+        eng: "Yerevan, Sebastia 93A",
+        ru: "Ереван, Себастия 93А",
+        arm: "Երևան Սեբաստիա 93Ա",
+    },
+    "t79": {
+        eng: "legal information",
+        ru: "Юридическая информация",
+        arm: "Իրավական տեղեկատվության",
+    },
+    "t80": {
+        eng: "We use cookies to personalize services and improve the usability of the site. If you do not agree to their use, change your browser settings.",
+        ru: "Мы используем файлы cookie для персонализации услуг и повышения удобства использования сайта. Если вы не согласны с их использованием, измените настройки браузера.",
+        arm: "Մենք օգտագործում ենք cookie-ներ ծառայությունները անհատականացնելու եւ կայքի օգտագործման հնարավորությունները բարելավելու համար: Եթե դուք համաձայն չեք դրանց օգտագործմանը, փոխեք ձեր բրաուզերի պարամետրերը:",
+    },
+    "t81": {
+        eng: "CaveLab is a cloud-based digital education platform. Included in the register of Armenian software. LMS \"CaveLab 2.0\" belongs to LLC \"CaveLab\". The platform is used by educational organizations to provide educational services.",
+        ru: "CaveLab — это облачная цифровая образовательная платформа. Включен в реестр армянского программного обеспечения. ЛМС «CaveLab 2.0» принадлежит ООО «CaveLab». Платформа используется образовательными организациями для оказания образовательных услуг.\n",
+        arm: "CaveLab-ը ամպային հիմքով թվային կրթական հարթակ է: Ներառված է հայկական ծրագրային ապահովման գրանցման մեջ: LMS CaveLab 2.0-ը պատկանում է LLC CaveLab-ին: Հարթակն օգտագործվում է կրթական կազմակերպությունների կողմից կրթական ծառայություններ մատուցելու համար:",
+    },
+    "t82": {
+        eng: "Educational services are provided in accordance with Federal Law dated May 4, 2024 No. 99-FZ “On licensing of certain types of activities.”",
+        ru: "Образовательные услуги оказываются в соответствии с Федеральным законом от 4 мая 2024 г. No 99-ФЗ «О лицензировании отдельных видов деятельности».",
+        arm: "Կրթական ծառայությունները մատուցվում են համաձայն 2024 թվականի մայիսի 4-ի No 99-ՖԶ «Գործունեության որոշակի տեսակների լիցենզավորման մասին» ՀՀ օրենքի:",
+    },
+    "t83": {
+        eng: "legal information",
+        ru: "Юридическая информация",
+        arm: "Իրավական տեղեկատվության",
     },
 };
 

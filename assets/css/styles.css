@@ -499,7 +499,7 @@ header{
     position: absolute;
     bottom:  clamp(10px,calc(10px + (25 - 10) * ((100vw - 768px) / (1320 - 768))),25px);
     right: clamp(2px,calc(2px + (10 - 2) * ((100vw - 768px) / (1320 - 768))),10px);
-    height: clamp(50%,calc(60% + (74 - 60) * ((100vw - 768px) / (1320 - 768))),60%);
+    height: clamp(30%,calc(30% + (60 - 30) * ((100vw - 320px) / (1320 - 320))),60%);
     width: initial;
 
 }
@@ -529,11 +529,14 @@ header{
 .icon-text span{
     color: var(--white);
     font-family: Montserrat_arm;
-    font-size: clamp(10px,calc(10px + (14 - 10) * ((100vw - 768px) / (1320 - 768))),14px);
+    font-size: clamp(8px,calc(8px + (14 - 8) * ((100vw - 768px) / (1320 - 768))),14px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     width: 70%;
+}
+.icon-text span.width-limit{
+    max-width: 230px;
 }
 .duration{
     color: var(--white);
@@ -1077,11 +1080,20 @@ footer{
     }
 }
 @media (max-width: 1024px) {
+    .teacher img{
+        border-radius: 14px;
+    }
+    .about_teacher{
+        border-radius: 14px;
+    }
+    .swiper1{
+        margin-top: 10px;
+    }
     .about_us_row img{
         max-height: 350px;
     }
     .about_us_row .text_block {
-        padding-top: 50px;
+        /*padding-top: 50px;*/
     }
     .duration{
         font-weight: 600;
@@ -1250,6 +1262,12 @@ footer{
     }
 }
 @media (max-width: 768px) {
+    .teacher img{
+        border-radius: 10px;
+    }
+    .about_teacher{
+        border-radius: 21px;
+    }
     .logo_wrapper span{
         font-size: clamp(20px,calc(20px + (28 - 20) * ((100vw - 320px) / (768 - 320))),28px);
     }
@@ -1272,7 +1290,7 @@ footer{
     }
     .img_text>p{
         font-size: clamp(12px,calc(12px + (20 - 12) * ((100vw - 320px) / (768 - 320))),20px);
-        height: 300px;
+        height: auto;
     }
     .first_phase>h2{
         font-size: clamp(20px,calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320))),40px);
@@ -1388,13 +1406,16 @@ footer{
         display: flex;
         flex-direction: column;
         height: auto;
+        gap: 20px;
     }
     .row-1{
         display: flex;
         flex-direction: column;
+        min-height: auto;
+        gap: 15px;
     }
     .row-1>div{
-        height: 220px;
+        height: auto;
     }
     .row-2{
         height: clamp(170px,calc(170px + (330 - 170) * ((100vw - 320px) / (768 - 320))),330px);
